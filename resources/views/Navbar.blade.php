@@ -1,4 +1,4 @@
-<div class="bg-neutral-50 px-4 mx-auto sm:px-6 dark:bg-gray-900">
+<div class="bg-neutral-50 px-4 mx-auto sm:px-6 dark:bg-gray-950">
     <div class="relative pt-6 pb-16 sm:pb-6">
         <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
             <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
@@ -30,25 +30,23 @@
                 </li>
                 <li>
                     <a href="/nossos-servicos" class="text-lg font-normal text-gray-500 dark:text-black hover:underline dark:text-gray-500 dark:hover:text-white">
-                        Nossos serviços
+                        Serviços
                     </a>
                 </li>
                 <li>
                     <a href="/fale-conosco" class="text-lg font-normal text-gray-500 dark:text-black hover:underline dark:text-gray-500 dark:hover:text-white">
-                        Fale conosco
+                        Contato
+                    </a>
+                </li>
+                <li>
+                    <a href="/posts" class="text-lg font-normal text-gray-500 dark:text-black hover:underline dark:text-gray-500 dark:hover:text-white">
+                        Posts
                     </a>
                 </li>
             </div>
             <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
                 <div class="inline-flex rounded-sm shadow">
-                    <!--
-                    <a href="/login">
-                        <div class="inline-flex items-center px-4 py-2 text-lg text-gray-900 bg-white border border-transparent rounded-sm cursor-pointer font-base hover:bg-neutral-100 transition-all duration-150 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-700 border dark:border-gray-700">
-                            Já sou cliente ➞
-                        </div>
-                    -->
                     <x-button link='/login' content='Já sou cliente ➞' />
-                    </a>
                 </div>
             </div>
         </nav>

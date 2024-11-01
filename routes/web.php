@@ -22,14 +22,6 @@ Route::get('/login', function () {
     return view('Login');
 });
 
-Route::get('/admin', function () {
-    return view('Admin/Index');
-});
-
-Route::get('/admin/posts', function () {
-    return view('Admin/Posts');
-});
-
 Route::get('/posts', function () {
     return view('Posts');
 });

@@ -15,7 +15,6 @@
     @yield('content')
 
     @include('Footer')
-
     @include ('NavbarScript')
 
 </body>

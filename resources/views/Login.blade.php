@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- SESSÃO 1. -->
-<div class="flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-center dark:bg-gray-900 px-4 sm:px-6 lg:px-8">
     <div class="relative py-3 sm:max-w-xs sm:mx-auto">
         <div class="min-h-96 px-8 py-6 text-left bg-white dark:bg-gray-900 rounded-xl shadow-lg">
             <div class="flex flex-col justify-center items-center h-full">

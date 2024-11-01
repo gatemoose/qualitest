@@ -9,26 +9,18 @@
             <h1 class="max-w-2xl mb-4 text-3xl font-extrabold leading-none tracking-tight md:text-4xl lg:text-5xl xl:text-6xl dark:text-white">
                 Qualitest Engenharia
             </h1>
-            <p class="max-w-3xl mb-6 font-light text-gray-500 dark:text-gray-300 lg:mb-8 md:text-lg lg:text-xl">
+            <p class="max-w-3xl mb-6 font-normal text-gray-600 dark:text-gray-300 lg:mb-8 md:text-lg lg:text-xl">
                 A Qualitest Engenharia é uma empresa líder em sondagens SPT e controle tecnológico de concreto. Especializada em fornecer dados precisos sobre a composição do solo e garantir a qualidade dos materiais de construção, a Qualitest assegura a excelência e a segurança dos projetos civis. Com uma equipe altamente qualificada e tecnologia de ponta, a empresa se destaca pela confiabilidade e precisão em todos os seus serviços.
             </p>
             <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-                <!--
-                <a href="/quem-somos" class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded-sm sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                    Saiba mais
-                </a> -->
                 <x-button link='/quem-somos' content='Saiba mais' px='5' py='3' />
-                <!--
-                <a href="/fale-conosco" class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded-sm sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                    Entre em contato
-                </a> -->
-                <x-button link='#' content='Entre em contato' px='5' py='3' />
+                <x-button link='/fale-conosco' content='Entre em contato' px='5' py='3' />
                 <div>
-                    <h3 class="font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-300">
+                    <h3 class="font-normal text-gray-600 md:text-lg lg:text-xl dark:text-gray-300">
                         Já é cliente?
                     </h3>
                     <a href=''>
-                        <h3 class="hover:underline hover:text-black font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-300 dark:hover:text-white">
+                        <h3 class="hover:underline hover:text-black font-normal text-gray-500 md:text-lg lg:text-xl dark:text-gray-300">
                             Faça login clicando aqui!
                         </h3>
                     </a>
@@ -52,7 +44,7 @@
             <h3 class="font-bold mt-8 text-xl md:mt-0 sm:text-2xl">
                 Por que escolher a <span class='text-orange-500'>Qualitest</span>?
             </h3>
-            <p class="sm:text-lg mt-6 font-light">
+            <p class="sm:text-lg mt-6 font-normal text-gray-600 dark:text-gray-300">
                 Escolher a nossa empresa significa optar por inovação e expertise no controle de qualidade de concreto e ensaios relacionados. Contamos com uma equipe altamente qualificada, cujos anos de experiência no setor de obras civis garantem resultados confiáveis e precisos. Nossa abordagem é focada na excelência e na melhoria contínua, oferecendo soluções que não apenas atendem, mas superam as expectativas dos nossos clientes. Com a gente, você tem a certeza de que seus projetos estarão sempre em boas mãos.
             </p>
         </div>
@@ -66,7 +58,7 @@
             <h3 class="font-bold mt-8 text-xl md:mt-0 sm:text-2xl">
                 Quais são nossos <span class="text-sky-500">valores</span>?
             </h3>
-            <p class="sm:text-lg mt-6 font-light">
+            <p class="sm:text-lg mt-6 font-normal text-gray-600 dark:text-gray-300">
                 Nossos valores são centrados em atender às necessidades e expectativas dos clientes, garantindo resultados excepcionais e pareceres técnicos precisos. Comprometemo-nos a cumprir prazos acordados e a assegurar a qualidade dos materiais utilizados na construção civil, sempre mantendo a integridade e a transparência em nossos serviços.
             </p>
         </div>
@@ -78,7 +70,7 @@
 <div class="w-full dark:bg-gray-900">
     <div class="mx-auto max-w-7xl px-8 lg:px-12 pt-8">
         <div class="mx-auto max-w-2xl text-center">
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-600 dark:text-white sm:text-4xl">
                 Últimas postagens
             </h2>
         </div>
@@ -123,7 +115,7 @@
                     </div>
                 </div>
                 <h3 class="mt-3 text-lg font-semibold leading-6 text-white hover:underline">
-                    <a href="/tech-blog/post1">
+                    <a href="#">
                         <span class="absolute inset-0"></span>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, temporibus!
                     </a>
@@ -146,7 +138,7 @@
                     </div>
                 </div>
                 <h3 class="mt-3 text-lg font-semibold leading-6 text-white hover:underline">
-                    <a href="/tech-blog/post1">
+                    <a href="#">
                         <span class="absolute inset-0"></span>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere consequatur nesciunt asperiores at reprehenderit praesentium.
                     </a>
