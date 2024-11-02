@@ -13,8 +13,10 @@
                 A Qualitest Engenharia é uma empresa líder em sondagens SPT e controle tecnológico de concreto. Especializada em fornecer dados precisos sobre a composição do solo e garantir a qualidade dos materiais de construção, a Qualitest assegura a excelência e a segurança dos projetos civis. Com uma equipe altamente qualificada e tecnologia de ponta, a empresa se destaca pela confiabilidade e precisão em todos os seus serviços.
             </p>
             <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-                <x-button link='/quem-somos' content='Saiba mais' px='5' py='3' />
-                <x-button link='/fale-conosco' content='Entre em contato' px='5' py='3' />
+                <div class="flex justify-start gap-4">
+                    <x-button link='/quem-somos' content='Saiba mais' px='5' py='3' />
+                    <x-button link='/fale-conosco' content='Entrar em contato' px='5' py='3' />
+                </div>
                 <div>
                     <h3 class="font-normal text-gray-600 md:text-lg lg:text-xl dark:text-gray-300">
                         Já é cliente?

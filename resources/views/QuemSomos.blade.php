@@ -87,7 +87,7 @@
                 <h2 class="text-2xl font-bold leading-tight text-black dark:text-white">
                     Edilene Patrícia da Silva Oliveira
                 </h2>
-                <p class="max-w-lg mt-3 text-xl font-normal text-gray-600 dark:text-gray-300 md:mt-8">
+                <p class="max-w-lg mt-3 font-normal text-gray-600 dark:text-gray-300 md:mt-8">
                     Edilene Patrícia da Silva Oliveira é a Técnica em Edificações e Engenheira Civil registrada no CREA (210703637-3) que ocupa a posição de Responsável Técnica na QualiTest Engenharia e Assessoria Técnica. Com especialização em Dimensionamento, Patologia, Terapia e Tecnologia em Estruturas de Concreto, Edilene possui uma sólida formação complementar, que inclui cursos em revestimento cerâmico, manutenção predial e diversos simpósios na área da construção civil.
                 </p>
             </div>
