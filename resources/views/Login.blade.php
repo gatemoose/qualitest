@@ -26,7 +26,7 @@
                 <input type="password" class="border rounded-lg px-3 py-2 mb-5 text-sm w-full outline-none dark:border-gray-500 dark:bg-gray-900 dark:text-gray-300" placeholder="••••••••" />
             </div>
             <div class="mt-5">
-                <a href='/admin'>
+                <a href='/login'>
                     <button class="py-1 px-8 bg-neutral-50 dark:bg-transparent hover:bg-neutral-100 text-gray-900 dark:text-gray-100 w-full transition ease-in duration-150 text-center text-base font-semibold shadow-md rounded cursor-pointer select-none border border-gray-500 dark:border-gray-700 dark:hover:bg-gray-700">
                         Entrar
                     </button>
