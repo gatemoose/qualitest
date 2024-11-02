@@ -6,7 +6,7 @@
   <main class="mt-7">
     <div class="mb-4 md:mb-0 w-full mx-auto relative">
       <div class="px-4 lg:px-0">
-        <h2 class="text-4xl font-semibold text-gray-800 dark:text-gray-300 leading-tight py-2 mb-2">
+        <h2 class="text-4xl font-semibold text-gray-800 dark:text-slate-50 leading-tight py-2 mb-2">
           Título da postagem
         </h2>
 

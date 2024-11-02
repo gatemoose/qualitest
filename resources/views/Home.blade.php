@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- SESSÃO 1. -->
-<section class="bg-white dark:bg-gray-900">
+<section class="bg-white dark:bg-slate-900">
     <div class="grid px-6 pt-12 pb-8 mx-auto gap-6 lg:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-20">
         <div class="mr-auto place-self-center lg:col-span-7">
             <h1 class="max-w-2xl mb-4 text-3xl font-extrabold leading-none tracking-tight md:text-4xl lg:text-5xl xl:text-6xl dark:text-white">
@@ -19,7 +19,7 @@
                     <h3 class="font-normal text-gray-600 md:text-lg lg:text-xl dark:text-gray-300">
                         Já é cliente?
                     </h3>
-                    <a href=''>
+                    <a href='/login'>
                         <h3 class="hover:underline font-normal text-gray-500 md:text-lg lg:text-xl dark:text-gray-300">
                             Faça login clicando aqui!
                         </h3>
@@ -35,7 +35,7 @@
 
 
 <!-- SESSÃO 2. -->
-<div class="text-center mx-auto p-8">
+<div class="text-center mx-auto p-8 dark:bg-slate-900">
     <div class="flex flex-wrap items-center mt-6 text-left text-center">
         <div class="w-full md:w-3/5 lg:w-1/2 px-4">
             <img src="img/ensaio-1.jpg" alt="gem" class="inline-block rounded shadow-lg">
@@ -67,7 +67,7 @@
 
 
 <!-- SESSÃO 3. -->
-<div class="w-full dark:bg-gray-900">
+<div class="w-full dark:bg-slate-900">
     <div class="mx-auto max-w-7xl px-8 lg:px-12 pt-8">
         <div class="mx-auto max-w-2xl text-center">
             <h2 class="text-3xl font-bold tracking-tight text-gray-600 dark:text-white sm:text-4xl">

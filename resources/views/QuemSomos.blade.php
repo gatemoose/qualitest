@@ -3,9 +3,9 @@
 @section('content')
 
 <!-- SESSÃO 1. -->
-<div class="flex flex-wrap items-center mt-12 text-left text-center px-10">
+<div class="flex flex-wrap items-center mt-12 text-left text-center px-4 sm:px-8 md:px-10 lg:px-12">
     <div class="w-full md:w-3/5 lg:w-1/2 px-4">
-        <img src="img/sondagem.jpg" alt="Membros da Equipe Qualitest em trabalho." class="inline-block rounded shadow-lg">
+        <img src="img/sondagem.jpg" alt="Membros da Equipe Qualitest em trabalho." class="inline-block rounded shadow-lg w-full">
     </div>
     <div class="w-full md:w-2/5 lg:w-1/2 px-4 text-center dark:text-neutral-50 md:text-left lg:pl-12">
         <h3 class="font-bold mt-8 text-xl md:mt-0 sm:text-2xl">
@@ -18,13 +18,12 @@
     </div>
 </div>
 
-
 <!-- SESSÃO 2. -->
-<section class="dark:bg-gray-900 pt-10">
+<section class="dark:bg-slate-900 pt-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mt-8 grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="text-center">
-                <div class="flex items-center justify-center mb-2 mr-10 mr-10">
+            <div class="text-center sm:text-base">
+                <div class="flex items-center justify-center mb-2">
                     <div class="h-12 w-12 rounded-md bg-transparent text-blue-600 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
@@ -37,11 +36,11 @@
                     </h3>
                 </div>
                 <p class="mt-2 font-normal text-gray-600 dark:text-gray-300">
-                    Atender às necessidades e expectativas dos nossos clientes na obtenção de resultados e elaboração de parecer técnico, no controle de qualidade dos materiais empregados na construção civil, cumprindo os prazos acordados e garantindo a ausência de desvios nos serviços prestados. 
+                    Atender às necessidades e expectativas dos nossos clientes na obtenção de resultados e elaboração de parecer técnico, no controle de qualidade dos materiais empregados na construção civil, cumprindo os prazos acordados e garantindo a ausência de desvios nos serviços prestados.
                 </p>
             </div>
-            <div class="text-center">
-                <div class="flex items-center justify-center mb-2 mr-10">
+            <div class="text-center sm:text-base">
+                <div class="flex items-center justify-center mb-2">
                     <div class="h-12 w-12 rounded-md bg-transparent text-blue-600 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
@@ -57,8 +56,8 @@
                     Os valores da Qualitest Engenharia incluem a valorização do próximo, qualidade, inovação e cumprimento de prazos. A ética e a responsabilidade garantem ações comprometidas com resultados que beneficiem nossos clientes.
                 </p>
             </div>
-            <div class="text-center">
-                <div class="flex items-center justify-center mb-2 mr-10">
+            <div class="text-center sm:text-base">
+                <div class="flex items-center justify-center mb-2">
                     <div class="h-12 w-12 rounded-md bg-transparent text-blue-600 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
@@ -79,9 +78,8 @@
     </div>
 </section>
 
-
 <!-- SESSÃO 3. -->
-<section class="pt-10 pb-10 overflow-hidden dark:bg-gray-900 sm:pt-16 2xl:pt-16">
+<section class="pt-10 pb-10 overflow-hidden dark:bg-slate-900 sm:pt-16 2xl:pt-16">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="grid items-center grid-cols-1 md:grid-cols-2">
 
@@ -90,55 +88,51 @@
                     Edilene Patrícia da Silva Oliveira
                 </h2>
                 <p class="max-w-lg mt-3 text-xl font-normal text-gray-600 dark:text-gray-300 md:mt-8">
-                Edilene Patrícia da Silva Oliveira é a Técnica em Edificações e Engenheira Civil registrada no CREA (210703637-3) que ocupa a posição de Responsável Técnica na QualiTest Engenharia e Assessoria Técnica. Com especialização em Dimensionamento, Patologia, Terapia e Tecnologia em Estruturas de Concreto, Edilene possui uma sólida formação complementar, que inclui cursos em revestimento cerâmico, manutenção predial e diversos simpósios na área da construção civil.
-            </p>
+                    Edilene Patrícia da Silva Oliveira é a Técnica em Edificações e Engenheira Civil registrada no CREA (210703637-3) que ocupa a posição de Responsável Técnica na QualiTest Engenharia e Assessoria Técnica. Com especialização em Dimensionamento, Patologia, Terapia e Tecnologia em Estruturas de Concreto, Edilene possui uma sólida formação complementar, que inclui cursos em revestimento cerâmico, manutenção predial e diversos simpósios na área da construção civil.
+                </p>
             </div>
 
             <div class="relative">
-                <img class="relative rounded w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110" src="img/edilene.jpg" alt="" />
+                <img class="relative rounded w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110" src="img/edilene.jpg" alt="Edilene Patrícia da Silva Oliveira" />
             </div>
-
-            
-
         </div>
 
         <div class="grid grid-cols-2 p-8">
-                <ul class="font-normal text-gray-600 dark:text-gray-300 gap-4 list-disc">
-                    <h3 class="text-xl font-bold leading-tight text-black dark:text-white">
+            <ul class="font-normal text-gray-600 dark:text-gray-300 gap-4 list-disc">
+                <h3 class="text-xl font-bold leading-tight text-black dark:text-white">
                     Qualificação Complementar
-                    </h3>
-                    <li>Sistema de Revestimento Cerâmico – IFRN Mossoró</li>
-                    <li>Manutenção Predial – IFRN Mossoró</li>
-                    <li>1º Simpósio da Construção Civil – IFRN Mossoró</li>
-                    <li>2º Simpósio da Construção Civil – IFRN Mossoró</li>
-                    <li>Ciclo de Palestras da Construção Civil – IFRN Natal</li>
-                    <li>MicroStation 2D – IFRN Mossoró</li>
-                    <li>Planejando a Construção</li>
-                    <li>Curso de Orientação Profissional</li>
-                    <li>Curso de Gestão de Qualidade Ampla</li>
-                    <li>Primeiros Socorros – UNP</li>
-                    <li>Combate a Incêndio – UNP</li>
-                    <li>NR10 – Instalações e Serviços em Eletricidade – UNP</li>
-                    <li>Segurança em Atividades de Petróleo e Gás – UNP</li>
-                    <li>Higiene Ocupacional – UNP</li>
-                </ul>
-                
-                <ul class="font-normal text-gray-600 dark:text-gray-300 gap-4 list-disc">
-                    <h3 class="text-xl font-bold leading-tight text-black dark:text-white">
-                        Atuação Profissional
-                    </h3>
-                    <li>Monitoria do Laboratório de Construção Civil IFRN Mossoró</li>
-                    <li>Técnica em Edificações Metro Quadrado Construções e Serviços</li>
-                    <li>Técnica em Edificações 3B Serviços e Construções</li>
-                    <li>Técnica em Edificações WSC Empreendimentos e Construções</li>
-                    <li>Técnica em Edificações Vipetro – Vilmar Pereira</li>
-                    <li>Construções e Montagens Petrolíferas</li>
-                    <li>Supervisora de Laboratório Consultest Engenharia e Serviços – Controle tecnológico da construção da fábrica de Cimentos Mizú – Baraúna RN</li>
-                    <li>Técnica de Planejamento e Diligenciamento Sigmatec</li>
-                    <li>Responsável Técnica QualiTest Engenharia e Assessoria Técnica</li>
-                </ul>
-            </div>
+                </h3>
+                <li>Sistema de Revestimento Cerâmico – IFRN Mossoró</li>
+                <li>Manutenção Predial – IFRN Mossoró</li>
+                <li>1º Simpósio da Construção Civil – IFRN Mossoró</li>
+                <li>2º Simpósio da Construção Civil – IFRN Mossoró</li>
+                <li>Ciclo de Palestras da Construção Civil – IFRN Natal</li>
+                <li>MicroStation 2D – IFRN Mossoró</li>
+                <li>Planejando a Construção</li>
+                <li>Curso de Orientação Profissional</li>
+                <li>Curso de Gestão de Qualidade Ampla</li>
+                <li>Primeiros Socorros – UNP</li>
+                <li>Combate a Incêndio – UNP</li>
+                <li>NR10 – Instalações e Serviços em Eletricidade – UNP</li>
+                <li>Segurança em Atividades de Petróleo e Gás – UNP</li>
+                <li>Higiene Ocupacional – UNP</li>
+            </ul>
 
+            <ul class="font-normal text-gray-600 dark:text-gray-300 gap-4 list-disc">
+                <h3 class="text-xl font-bold leading-tight text-black dark:text-white">
+                    Atuação Profissional
+                </h3>
+                <li>Monitoria do Laboratório de Construção Civil IFRN Mossoró</li>
+                <li>Técnica em Edificações Metro Quadrado Construções e Serviços</li>
+                <li>Técnica em Edificações 3B Serviços e Construções</li>
+                <li>Técnica em Edificações WSC Empreendimentos e Construções</li>
+                <li>Técnica em Edificações Vipetro – Vilmar Pereira</li>
+                <li>Construções e Montagens Petrolíferas</li>
+                <li>Supervisora de Laboratório Consultest Engenharia e Serviços – Controle tecnológico da construção da fábrica de Cimentos Mizú – Baraúna RN</li>
+                <li>Técnica de Planejamento e Diligenciamento Sigmatec</li>
+                <li>Responsável Técnica QualiTest Engenharia e Assessoria Técnica</li>
+            </ul>
+        </div>
     </div>
 </section>
 

@@ -4,22 +4,23 @@
 
 <!-- SESSÃO 1. -->
 <div class="max-w-6xl max-lg:max-w-3xl mx-auto p-4">
-      <div class="bg-white rounded p-8 dark:bg-gray-900">
+      <div class="bg-white rounded p-8 dark:bg-slate-900">
         <h2 class="text-3xl text-gray-800 font-extrabold mb-12 dark:text-gray-100">
-            Formulário para contato
+            Entre em contato
         </h2>
 
         <div class="grid lg:grid-cols-2 items-start gap-12">
           <form class="space-y-3 text-gray-800">
-            <input type='text' placeholder='Nome' class="w-full bg-gray-100 rounded py-3 px-6 text-sm dark:bg-gray-800 dark:text-white" />
-            <input type='email' placeholder='Email' class="w-full bg-gray-100 rounded py-3 px-6 text-sm dark:bg-gray-800 dark:text-white" />
-            <input type='email' placeholder='Telefone' class="w-full bg-gray-100 rounded py-3 px-6 text-sm dark:bg-gray-800 dark:text-white" />
-            <textarea placeholder='Mensagem' rows="6" class="w-full bg-gray-100 rounded px-6 text-sm pt-3 dark:bg-gray-800 dark:text-white"></textarea>
+            <input type='text' placeholder='Nome' class="w-full bg-gray-100 rounded py-3 px-6 text-sm dark:bg-slate-800 dark:text-white" />
+            <input type='email' placeholder='Email' class="w-full bg-gray-100 rounded py-3 px-6 text-sm dark:bg-slate-800 dark:text-white" />
+            <input type='email' placeholder='Telefone' class="w-full bg-gray-100 rounded py-3 px-6 text-sm dark:bg-slate-800 dark:text-white" />
+            <textarea placeholder='Mensagem' rows="6" class="w-full bg-gray-100 rounded px-6 text-sm pt-3 dark:bg-slate-800 dark:text-white"></textarea>
 
-            <div class='flex justify-start gap-2'>
-                <x-button link='#' content='Enviar' px='5' py='3' />
-                <x-button link='https://wa.me/5584996667342?text=Olá,%20eu%20vim%20pelo%20site.' content='Whatsapp' px='5' py='3' />
+            <div class='flex justify-start gap-4'>
+              <x-button link='#' content='Enviar' px='5' py='3' />
+              <x-button link='https://wa.me/5584996667342' content='Whatsapp' px='5' py='3' />
             </div>
+
           </form>
 
           <div class="grid sm:grid-cols-2  gap-12">
@@ -88,13 +89,19 @@
                     Redes sociais
                 </h4>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline">
-                    → Facebook
+                    <a href="https://www.facebook.com/qualitestEngenharia">
+                      → Facebook
+                    </a>
                 </p>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline">
-                    → Instagram
+                    <a href="https://www.instagram.com/qualitest.eng/">
+                      → Instagram
+                    </a>
                 </p>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline">
-                    → LinkedIn
+                    <a href="https://wa.me/5584996667342">
+                      → Whatsapp
+                    </a>
                 </p>
               </div>
             </div>

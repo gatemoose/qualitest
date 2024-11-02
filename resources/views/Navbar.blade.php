@@ -1,4 +1,4 @@
-<div class="bg-neutral-50 px-4 mx-auto sm:px-6 dark:bg-gray-950">
+<div class="bg-neutral-50 px-4 mx-auto sm:px-6 dark:bg-slate-900">
     <div class="relative pt-6 pb-16 sm:pb-6">
         <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
             <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
@@ -24,22 +24,22 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/quem-somos" class="text-lg font-normal text-gray-500 dark:text-black hover:underline dark:text-gray-500 dark:hover:text-white">
-                        Quem somos
+                    <a href="/quem-somos" class="text-lg font-normal text-gray-500 hover:underline dark:text-gray-500 dark:hover:text-white">
+                        Sobre
                     </a>
                 </li>
                 <li>
-                    <a href="/nossos-servicos" class="text-lg font-normal text-gray-500 dark:text-black hover:underline dark:text-gray-500 dark:hover:text-white">
+                    <a href="/nossos-servicos" class="text-lg font-normal text-gray-500 hover:underline dark:text-gray-500 dark:hover:text-white">
                         Serviços
                     </a>
                 </li>
                 <li>
-                    <a href="/fale-conosco" class="text-lg font-normal text-gray-500 dark:text-black hover:underline dark:text-gray-500 dark:hover:text-white">
+                    <a href="/fale-conosco" class="text-lg font-normal text-gray-500 hover:underline dark:text-gray-500 dark:hover:text-white">
                         Contato
                     </a>
                 </li>
                 <li>
-                    <a href="/posts" class="text-lg font-normal text-gray-500 dark:text-black hover:underline dark:text-gray-500 dark:hover:text-white">
+                    <a href="/posts" class="text-lg font-normal text-gray-500 hover:underline dark:text-gray-500 dark:hover:text-white">
                         Posts
                     </a>
                 </li>
@@ -59,22 +59,27 @@
                 </li>
                 <li>
                     <a href="/quem-somos" class="block text-lg font-normal text-gray-500 hover:text-black hover:underline dark:text-gray-500 dark:hover:text-white">
-                        Quem somos
+                        Sobre
                     </a>
                 </li>
                 <li>
                     <a href="/nossos-servicos" class="block text-lg font-normal text-gray-500 hover:text-black hover:underline dark:text-gray-500 dark:hover:text-white">
-                        Nossos serviços
+                        Serviços
                     </a>
                 </li>
                 <li>
                     <a href="/fale-conosco" class="block text-lg font-normal text-gray-500 hover:text-black hover:underline dark:text-gray-500 dark:hover:text-white">
-                        Fale conosco
+                        Contato
                     </a>
                 </li>
                 <li>
-                    <a href="/login" class="text-lg font-normal text-gray-500 dark:text-black hover:underline dark:text-gray-500 dark:hover:text-white">
-                        Fazer login
+                    <a href="/posts" class="text-lg font-normal text-gray-500 hover:underline dark:text-gray-500 dark:hover:text-white">
+                        Posts
+                    </a>
+                </li>
+                <li>
+                    <a href="/login" class="text-lg font-normal text-gray-500 hover:underline dark:text-gray-500 dark:hover:text-white">
+                        Login
                     </a>
                 </li>
             </ul>

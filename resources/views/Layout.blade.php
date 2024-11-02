@@ -8,7 +8,7 @@
     </title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class='dark:bg-gray-900'>
+<body class='dark:bg-slate-900'>
 
     @include('Navbar')
 
