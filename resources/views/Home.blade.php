@@ -14,8 +14,8 @@
             </p>
             <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
                 <div class="flex justify-start gap-4">
-                    <x-button link='/quem-somos' content='Saiba mais' px='5' py='3' />
-                    <x-button link='/fale-conosco' content='Entrar em contato' px='5' py='3' />
+                    <x-button link='/sobre' content='Saiba mais' px='5' py='3' />
+                    <x-button link='/contato' content='Entrar em contato' px='5' py='3' />
                 </div>
                 <div>
                     <h3 class="font-normal text-gray-600 md:text-lg lg:text-xl dark:text-gray-300">
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <h3 class="mt-3 text-lg font-semibold leading-6 text-white hover:underline">
-                    <a href="/tech-blog/post1">
+                    <a href="#">
                         <span class="absolute inset-0"></span>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vel quidem commodi!
                     </a>

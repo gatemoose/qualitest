@@ -99,7 +99,7 @@
 
         <div class="grid grid-cols-2 p-8">
             <ul class="font-normal text-gray-600 dark:text-gray-300 gap-4 list-disc">
-                <h3 class="text-xl font-bold leading-tight text-black dark:text-white">
+                <h3 class="text-xl font-bold leading-tight text-blue-500">
                     Qualificação Complementar
                 </h3>
                 <li>Sistema de Revestimento Cerâmico – IFRN Mossoró</li>
@@ -119,7 +119,7 @@
             </ul>
 
             <ul class="font-normal text-gray-600 dark:text-gray-300 gap-4 list-disc">
-                <h3 class="text-xl font-bold leading-tight text-black dark:text-white">
+                <h3 class="text-xl font-bold leading-tight text-orange-500">
                     Atuação Profissional
                 </h3>
                 <li>Monitoria do Laboratório de Construção Civil IFRN Mossoró</li>

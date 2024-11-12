@@ -6,16 +6,16 @@ Route::get('/', function () {
     return view('Home');
 });
 
-Route::get('/quem-somos', function () {
-    return view('QuemSomos');
+Route::get('/sobre', function () {
+    return view('Sobre');
 });
 
-Route::get('/fale-conosco', function () {
-    return view('FaleConosco');
+Route::get('/contato', function () {
+    return view('Contato');
 });
 
-Route::get('/nossos-servicos', function () {
-    return view('NossosServicos');
+Route::get('/servicos', function () {
+    return view('Servicos');
 });
 
 Route::get('/login', function () {

@@ -55,7 +55,7 @@
         </div>
         <div class="mt-10 flex flex-row items-start justify-start gap-y-4 gap-x-6">
             <x-button link='/contato' content='Entre em contato' px='4' py='3' class="flex-1" />
-            <x-button link='/quem-somos' content='Saiba mais' px='5' py='3' class="flex-1" />
+            <x-button link='/sobre' content='Saiba mais' px='5' py='3' class="flex-1" />
         </div>
 
       </div>
@@ -68,7 +68,7 @@
 <!-- SESSÃO 2. -->
 <div class="py-24 px-8 max-w-5xl mx-auto flex flex-col md:flex-row gap-12">
     <div class="flex flex-col text-left basis-1/2 dark:text-gray-200">
-        <p class="inline-block font-semibold text-primary mb-4">Saiba mais sobre</p>
+        <p class="inline-block font-semibold text-blue-500 mb-4">Saiba mais sobre</p>
         <p id="nossos-serviços" class="sm:text-4xl text-3xl font-extrabold text-base-content">Nossos serviços</p>
         
         <ul class="pt-4">
