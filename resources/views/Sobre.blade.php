@@ -99,7 +99,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
-            <ul class="font-normal text-gray-600 dark:text-gray-300 gap-4 list-disc md:text-lg lg:text-xl">
+            <ul class="font-normal text-gray-600 dark:text-gray-300 gap-4 list-disc">
                 <h3 class="text-xl font-bold leading-tight dark:text-white">
                     Atuação Profissional
                 </h3>
