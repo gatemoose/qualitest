@@ -1,5 +1,5 @@
-<div class="bg-neutral-50 px-4 mx-auto sm:px-6 dark:bg-slate-900">
-    <div class="relative pt-6 pb-16 sm:pb-6">
+<div class="bg-neutral-50 px-4 mx-auto sm:px-8 dark:bg-slate-900">
+    <div class="relative pt-6 pb-6 sm:pb-3">
         <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
             <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
                 <div class="flex items-center justify-between w-full md:w-auto">
@@ -46,17 +46,13 @@
             </div>
             <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
                 <div class="inline-flex rounded-sm shadow">
-                    <x-button link='/login' content='Já sou cliente ➞' />
+                    <x-button link='/login' content='Entrar' />
                 </div>
             </div>
         </nav>
-        <div id="mobile-menu" class="hidden flex-col md:hidden">
-            <ul class="space-y-2 text-end transition-all duration-150 ease-in-out">
-                <li>
-                    <a href="/" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline">
-                        Home
-                    </a>
-                </li>
+        
+        <div id="mobile-menu" class="hidden flex-col md:hidden transform transition-transform scale-95 opacity-0 duration-300 ease-in-out">
+            <ul class="space-y-2 text-end">
                 <li>
                     <a href="/sobre" class="block text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white">
                         Sobre
@@ -73,12 +69,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/posts" class="text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline">
+                    <a href="/posts" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline">
                         Posts
                     </a>
                 </li>
                 <li>
-                    <a href="/login" class="text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline">
+                    <a href="/login" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline">
                         Login
                     </a>
                 </li>

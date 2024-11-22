@@ -3,15 +3,15 @@
 @section('content')
 
 <!-- SESSÃO 1. -->
-<div class="flex flex-wrap items-center mt-12 text-left text-center px-4 sm:px-8 md:px-10 lg:px-12">
+<div class="flex flex-wrap items-center mt-12 px-4 sm:px-8 md:px-10 lg:px-12">
     <div class="w-full md:w-3/5 lg:w-1/2 px-4">
         <img src="img/sondagem.jpg" alt="Membros da Equipe Qualitest em trabalho." class="inline-block rounded shadow-lg w-full">
     </div>
-    <div class="w-full md:w-2/5 lg:w-1/2 px-4 text-center dark:text-neutral-50 md:text-left lg:pl-12">
+    <div class="w-full md:w-2/5 lg:w-1/2 px-4 dark:text-neutral-50 lg:pl-12">
         <h3 class="font-bold mt-8 text-xl md:mt-0 sm:text-2xl">
             Um pouco da nossa história...
         </h3>
-        <p class="sm:text-lg mt-6 font-normal text-gray-600 dark:text-gray-300">
+        <p class="mt-6 font-normal text-gray-600 dark:text-gray-300 md:text-lg lg:text-xl">
             Somos uma empresa fundada em outubro de 2017 pela engenheira idealizadora e responsável técnica <strong>Edilene Patricia da Silva Oliveira</strong>, que traz inovação ao mercado de controle de qualidade de concreto e demais ensaios voltados à área, contando com larga experiência dos seus funcionários no mercado adquirida através de longos anos de atuação na área de obras civis.
             Contando com equipamentos novos e de excelente qualidade, e profissionais capacitados, podemos atender sua demanda de forma personalizada com rapidez e eficiência.
         </p>
@@ -22,7 +22,7 @@
 <section class="dark:bg-slate-900 pt-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mt-8 grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="text-center sm:text-base">
+            <div class="md:text-center sm:text-base">
                 <div class="flex items-center justify-center mb-2">
                     <div class="h-12 w-12 rounded-md bg-transparent text-blue-600 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -31,15 +31,15 @@
                                 d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-600 dark:text-gray-300">
+                    <h3 class="text-2xl font-bold text-gray-600 dark:text-gray-300 mr-6">
                         Missão
                     </h3>
                 </div>
-                <p class="mt-2 font-normal text-gray-600 dark:text-gray-300">
+                <p class="mt-2 font-normal text-gray-600 dark:text-gray-300 md:text-lg lg:text-xl px-4 md:px-0">
                     Atender às necessidades e expectativas dos nossos clientes na obtenção de resultados e elaboração de parecer técnico, no controle de qualidade dos materiais empregados na construção civil, cumprindo os prazos acordados e garantindo a ausência de desvios nos serviços prestados.
                 </p>
             </div>
-            <div class="text-center sm:text-base">
+            <div class="md:text-center sm:text-base">
                 <div class="flex items-center justify-center mb-2">
                     <div class="h-12 w-12 rounded-md bg-transparent text-blue-600 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -48,15 +48,15 @@
                                 d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-600 dark:text-gray-300">
+                    <h3 class="text-2xl font-bold text-gray-600 dark:text-gray-300 mr-6">
                         Valores
                     </h3>
                 </div>
-                <p class="mt-2 font-normal text-gray-600 dark:text-gray-300">
+                <p class="mt-2 font-normal text-gray-600 dark:text-gray-300 md:text-lg lg:text-xl px-4 md:px-0">
                     Os valores da Qualitest Engenharia incluem a valorização do próximo, qualidade, inovação e cumprimento de prazos. A ética e a responsabilidade garantem ações comprometidas com resultados que beneficiem nossos clientes.
                 </p>
             </div>
-            <div class="text-center sm:text-base">
+            <div class="md:text-center sm:text-base">
                 <div class="flex items-center justify-center mb-2">
                     <div class="h-12 w-12 rounded-md bg-transparent text-blue-600 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -66,11 +66,12 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-600 dark:text-gray-300">
+                    <h3 class="text-2xl font-bold text-gray-600 dark:text-gray-300 mr-6">
                         Visão
                     </h3>
                 </div>
-                <p class="mt-2 font-normal text-gray-600 dark:text-gray-300">
+                <p class="mt-2 font-normal text-gray-600 dark:text-gray-300 md:text-lg lg:text-xl 
+                 px-4 md:px-0">
                     Ser referência em assessoria técnica e controle tecnológico de materiais da construção civil, como concreto e solos, é vital para garantir qualidade e segurança nas obras. Isso envolve técnicas avançadas e um compromisso com a excelência no atendimento, oferecendo soluções eficazes para o mercado.
                 </p>
             </div>
@@ -81,13 +82,13 @@
 <!-- SESSÃO 3. -->
 <section class="pt-10 pb-10 overflow-hidden dark:bg-slate-900 sm:pt-16 2xl:pt-16">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div class="grid items-center grid-cols-1 md:grid-cols-2">
+        <div class="grid items-center grid-cols-1 md:grid-cols-2 px-4">
 
             <div>
                 <h2 class="text-2xl font-bold leading-tight text-black dark:text-white">
                     Edilene Patrícia da Silva Oliveira
                 </h2>
-                <p class="max-w-lg mt-3 font-normal text-gray-600 dark:text-gray-300 md:mt-8">
+                <p class="max-w-lg mt-3 font-normal text-gray-600 dark:text-gray-300 md:mt-8 md:text-lg lg:text-xl mb-3 md:mb-8">
                     Edilene Patrícia da Silva Oliveira é a Técnica em Edificações e Engenheira Civil registrada no CREA (210703637-3) que ocupa a posição de Responsável Técnica na QualiTest Engenharia e Assessoria Técnica. Com especialização em Dimensionamento, Patologia, Terapia e Tecnologia em Estruturas de Concreto, Edilene possui uma sólida formação complementar, que inclui cursos em revestimento cerâmico, manutenção predial e diversos simpósios na área da construção civil.
                 </p>
             </div>
@@ -97,9 +98,23 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-2 p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+            <ul class="font-normal text-gray-600 dark:text-gray-300 gap-4 list-disc md:text-lg lg:text-xl">
+                <h3 class="text-xl font-bold leading-tight dark:text-white">
+                    Atuação Profissional
+                </h3>
+                <li>Monitoria do Laboratório de Construção Civil IFRN Mossoró</li>
+                <li>Técnica em Edificações Metro Quadrado Construções e Serviços</li>
+                <li>Técnica em Edificações 3B Serviços e Construções</li>
+                <li>Técnica em Edificações WSC Empreendimentos e Construções</li>
+                <li>Técnica em Edificações Vipetro – Vilmar Pereira</li>
+                <li>Construções e Montagens Petrolíferas</li>
+                <li>Supervisora de Laboratório Consultest Engenharia e Serviços – Controle tecnológico da construção da fábrica de Cimentos Mizú – Baraúna RN</li>
+                <li>Técnica de Planejamento e Diligenciamento Sigmatec</li>
+                <li>Responsável Técnica QualiTest Engenharia e Assessoria Técnica</li>
+            </ul>
             <ul class="font-normal text-gray-600 dark:text-gray-300 gap-4 list-disc">
-                <h3 class="text-xl font-bold leading-tight text-blue-500">
+                <h3 class="text-xl font-bold leading-tight dark:text-white">
                     Qualificação Complementar
                 </h3>
                 <li>Sistema de Revestimento Cerâmico – IFRN Mossoró</li>
@@ -117,22 +132,8 @@
                 <li>Segurança em Atividades de Petróleo e Gás – UNP</li>
                 <li>Higiene Ocupacional – UNP</li>
             </ul>
+</div>
 
-            <ul class="font-normal text-gray-600 dark:text-gray-300 gap-4 list-disc">
-                <h3 class="text-xl font-bold leading-tight text-orange-500">
-                    Atuação Profissional
-                </h3>
-                <li>Monitoria do Laboratório de Construção Civil IFRN Mossoró</li>
-                <li>Técnica em Edificações Metro Quadrado Construções e Serviços</li>
-                <li>Técnica em Edificações 3B Serviços e Construções</li>
-                <li>Técnica em Edificações WSC Empreendimentos e Construções</li>
-                <li>Técnica em Edificações Vipetro – Vilmar Pereira</li>
-                <li>Construções e Montagens Petrolíferas</li>
-                <li>Supervisora de Laboratório Consultest Engenharia e Serviços – Controle tecnológico da construção da fábrica de Cimentos Mizú – Baraúna RN</li>
-                <li>Técnica de Planejamento e Diligenciamento Sigmatec</li>
-                <li>Responsável Técnica QualiTest Engenharia e Assessoria Técnica</li>
-            </ul>
-        </div>
     </div>
 </section>
 

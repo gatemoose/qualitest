@@ -41,7 +41,7 @@
         <img src="img/ensaio-1.jpg" alt="Capa da postagem" class="object-cover w-full h-full" />
       </div>
       <div class="p-6 px-2 sm:pr-6 sm:pl-4">
-        <p class="block antialiased text-sm font-light leading-normal text-inherit mb-4 !text-orange-500 !font-semibold">
+        <p class="block antialiased text-sm font-light leading-normal text-inherit mb-4 !text-blue-500 !font-semibold">
             Technology
         </p>
         <a href="#" class="block antialiased tracking-normal text-xl font-semibold leading-snug text-blue-gray-900 mb-2 normal-case transition-colors hover:text-gray-700 dark:hover:text-white hover:underline">
@@ -70,7 +70,7 @@
         <img src="img/ensaio-1.jpg" alt="Capa da postagem" class="object-cover w-full h-full" />
       </div>
       <div class="p-6 px-2 sm:pr-6 sm:pl-4">
-        <p class="block antialiased text-sm font-light leading-normal text-inherit mb-4 !text-orange-500 !font-semibold">
+        <p class="block antialiased text-sm font-light leading-normal text-inherit mb-4 !text-blue-500 !font-semibold">
             Technology
         </p>
         <a href="#" class="block antialiased tracking-normal text-xl font-semibold leading-snug text-blue-gray-900 mb-2 normal-case transition-colors hover:text-gray-700 dark:hover:text-white hover:underline">

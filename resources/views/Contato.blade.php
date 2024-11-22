@@ -72,7 +72,7 @@
                 <h4 class="text-gray-800 dark:text-gray-200 text-base font-bold">
                     Envie um email
                 </h4>
-                <a href="mailto:qualitest@outlook.com.br" class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline">
+                <a href="mailto:qualitest@outlook.com.br" class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
                     qualitest@outlook.com.br
                 </a>
               </div>
@@ -88,19 +88,19 @@
                 <h4 class="text-gray-800 dark:text-gray-200 text-base font-bold">
                     Redes sociais
                 </h4>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline">
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
                     <a href="https://www.facebook.com/qualitestEngenharia">
-                      → Facebook
+                      Facebook
                     </a>
                 </p>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline">
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
                     <a href="https://www.instagram.com/qualitest.eng/">
-                      → Instagram
+                      Instagram
                     </a>
                 </p>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline">
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
                     <a href="https://wa.me/5584996667342">
-                      → Whatsapp
+                      Whatsapp
                     </a>
                 </p>
               </div>
@@ -111,7 +111,7 @@
 </div>
 
 <!-- MAPA. -->
-<div class='text-3xl font-extrabold text-center dark:text-white p-3'>
+<div class='text-3xl font-extrabold text-center md:hidden dark:text-white p-3'>
     Onde nos encontrar
 </div>
 <div class="relative w-full h-96">

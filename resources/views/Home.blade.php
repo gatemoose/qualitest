@@ -9,7 +9,7 @@
             <h1 class="max-w-2xl mb-4 text-3xl font-extrabold leading-none tracking-tight md:text-4xl lg:text-5xl xl:text-6xl dark:text-white">
                 Qualitest Engenharia
             </h1>
-            <p class="max-w-3xl mb-6 font-normal text-gray-600 dark:text-gray-300 lg:mb-8 md:text-lg lg:text-xl">
+            <p class="max-w-3xl mb-6 font-normal text-gray-600 dark:text-gray-300 lg:mb-8 md:text-lg lg:text-xl lg:pr-4">
                 A Qualitest Engenharia é uma empresa líder em sondagens SPT e controle tecnológico de concreto. Especializada em fornecer dados precisos sobre a composição do solo e garantir a qualidade dos materiais de construção, a Qualitest assegura a excelência e a segurança dos projetos civis. Com uma equipe altamente qualificada e tecnologia de ponta, a empresa se destaca pela confiabilidade e precisão em todos os seus serviços.
             </p>
             <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
@@ -37,14 +37,14 @@
 
 
 <!-- SESSÃO 2. -->
-<div class="text-center mx-auto p-8 dark:bg-slate-900">
-    <div class="flex flex-wrap items-center mt-6 text-left text-center">
-        <div class="w-full md:w-3/5 lg:w-1/2 px-4">
-            <img src="img/ensaio-1.jpg" alt="gem" class="inline-block rounded shadow-lg">
+<div class="mx-auto p-6 dark:bg-slate-900">
+    <div class="flex flex-wrap items-center mt-6 text-left">
+        <div class="w-full md:w-3/5 lg:w-1/2">
+            <img src="img/ensaio-1.jpg" alt="Imagem" class="md:size-3/4 lg:size-full inline-block rounded shadow-lg">
         </div>
-        <div class="w-full md:w-2/5 lg:w-1/2 px-4 text-center dark:text-neutral-50 md:text-left lg:pl-12">
+        <div class="w-full md:w-2/5 lg:w-1/2 dark:text-neutral-50 md:text-left lg:pl-12">
             <h3 class="font-bold mt-8 text-xl md:mt-0 sm:text-2xl">
-                Por que escolher a <span class='text-orange-500'>Qualitest</span>?
+                Por que a <span class='text-orange-500'>Qualitest</span>?
             </h3>
             <p class="sm:text-lg mt-6 font-normal text-gray-600 dark:text-gray-300">
                 Escolher a nossa empresa significa optar por inovação e expertise no controle de qualidade de concreto e ensaios relacionados. Contamos com uma equipe altamente qualificada, cujos anos de experiência no setor de obras civis garantem resultados confiáveis e precisos. Nossa abordagem é focada na excelência e na melhoria contínua, oferecendo soluções que não apenas atendem, mas superam as expectativas dos nossos clientes. Com a gente, você tem a certeza de que seus projetos estarão sempre em boas mãos.
@@ -52,11 +52,11 @@
         </div>
     </div>
 
-    <div class="flex flex-wrap items-center mt-20 text-left text-center">
-        <div class="w-full md:w-3/5 lg:w-1/2 px-4">
-            <img src="img/carac.jpg" alt="project members" class="inline-block rounded shadow-lg">
+    <div class="flex flex-wrap items-center mt-10">
+        <div class="w-full md:w-3/5 lg:w-1/2">
+            <img src="img/carac.jpg" alt="Imagem" class="md:size-3/4 lg:size-full inline-block rounded shadow-lg">
         </div>
-        <div class="w-full md:w-2/5 lg:w-1/2 px-4 md:order-first text-center dark:text-white md:text-left lg:pr-12">
+        <div class="w-full md:w-2/5 lg:w-1/2 md:order-first dark:text-white md:text-left lg:pr-12">
             <h3 class="font-bold mt-8 text-xl md:mt-0 sm:text-2xl">
                 Quais são nossos <span class="text-sky-500">valores</span>?
             </h3>
