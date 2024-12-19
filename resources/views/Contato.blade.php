@@ -72,7 +72,7 @@
                 <h4 class="text-gray-800 dark:text-gray-200 text-base font-bold">
                     Envie um email
                 </h4>
-                <a href="mailto:qualitest@outlook.com.br" class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
+                <a href="mailto:qualitest@outlook.com.br" class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white" wire:navigate>
                     qualitest@outlook.com.br
                 </a>
               </div>
@@ -89,17 +89,17 @@
                     Redes sociais
                 </h4>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
-                    <a href="https://www.facebook.com/qualitestEngenharia">
+                    <a href="https://www.facebook.com/qualitestEngenharia" wire:navigate>
                       Facebook
                     </a>
                 </p>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
-                    <a href="https://www.instagram.com/qualitest.eng/">
+                    <a href="https://www.instagram.com/qualitest.eng/" wire:navigate>
                       Instagram
                     </a>
                 </p>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
-                    <a href="https://wa.me/5584996667342">
+                    <a href="https://wa.me/5584996667342" wire:navigate>
                       Whatsapp
                     </a>
                 </p>

@@ -3,7 +3,7 @@
         <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
             <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
                 <div class="flex items-center justify-between w-full md:w-auto">
-                    <a href="/">
+                    <a href="/" wire:navigate>
                         <span class="sr-only">Qualitest Engenharia</span>
                         <img class="w-auto h-8 sm:h-10" src="img/logo-no-bg.png" loading="lazy" width="200" height="40">
                     </a>
@@ -19,27 +19,27 @@
             </div>
             <div id="nav-menu" class="hidden md:flex md:space-x-10 list-none">
                 <li>
-                    <a href="/" class="text-lg font-normal hover:text-black hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white">
+                    <a href="/" class="text-lg font-normal hover:text-black hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white" wire:navigate>
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="/sobre" class="text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white">
+                    <a href="/sobre" class="text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white" wire:navigate>
                         Sobre
                     </a>
                 </li>
                 <li>
-                    <a href="/servicos" class="text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white">
+                    <a href="/servicos" class="text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white" wire:navigate>
                         Serviços
                     </a>
                 </li>
                 <li>
-                    <a href="/contato" class="text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white">
+                    <a href="/contato" class="text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white" wire:navigate>
                         Contato
                     </a>
                 </li>
                 <li>
-                    <a href="/posts" class="text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white">
+                    <a href="/posts" class="text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white" wire:navigate>
                         Posts
                     </a>
                 </li>
@@ -54,27 +54,27 @@
         <div id="mobile-menu" class="hidden flex-col md:hidden transform transition-transform scale-95 opacity-0 duration-300 ease-in-out">
             <ul class="space-y-2 text-end">
                 <li>
-                    <a href="/sobre" class="block text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white">
+                    <a href="/sobre" class="block text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white" wire:navigate>
                         Sobre
                     </a>
                 </li>
                 <li>
-                    <a href="/servicos" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline">
+                    <a href="/servicos" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline" wire:navigate>
                         Serviços
                     </a>
                 </li>
                 <li>
-                    <a href="/contato" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline">
+                    <a href="/contato" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline" wire:navigate>
                         Contato
                     </a>
                 </li>
                 <li>
-                    <a href="/posts" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline">
+                    <a href="/posts" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline" wire:navigate>
                         Posts
                     </a>
                 </li>
                 <li>
-                    <a href="/login" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline">
+                    <a href="/login" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline" wire:navigate>
                         Login
                     </a>
                 </li>

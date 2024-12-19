@@ -15,7 +15,7 @@
         <p class="block !text-blue-500 antialiased text-sm font-light leading-normal text-inherit mb-4 !font-semibold">
             Technology
         </p>
-        <a href="#" class="block antialiased tracking-normal text-xl font-semibold leading-snug text-blue-gray-900 mb-2 normal-case transition-colors hover:text-gray-700 dark:hover:text-white hover:underline">
+        <a href="#" class="block antialiased tracking-normal text-xl font-semibold leading-snug text-blue-gray-900 mb-2 normal-case transition-colors hover:text-gray-700 dark:hover:text-white hover:underline" wire:navigate>
             Revolutionizing Our Production Process
         </a>
         <p class="block antialiased text-base leading-relaxed text-inherit mb-8 font-normal !text-gray-500">

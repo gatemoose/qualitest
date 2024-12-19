@@ -16,6 +16,7 @@
         font-family: "Inter", sans-serif;
     };
     </style>
+    @livewireStyles
 </head>
 <body class='dark:bg-slate-900'>
 
@@ -25,6 +26,8 @@
 
     @include('Footer')
     @include ('NavbarScript')
+
+    @livewireScripts
 
 </body>
 </html>
