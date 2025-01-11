@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\DocumentResource\Pages;
-use App\Filament\Resources\DocumentResource\RelationManagers;
-use App\Models\Document;
+use App\Filament\Resources\ServicesListResource\Pages;
+use App\Filament\Resources\ServicesListResource\RelationManagers;
+use App\Models\ServicesList;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,25 +13,20 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class DocumentResource extends Resource
+class ServicesListResource extends Resource
 {
-    protected static ?string $model = Document::class;
+    protected static ?string $model = ServicesList::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-document';
+    protected static ?string $navigationIcon = 'heroicon-o-wrench-screwdriver';
 
     public static function form(Form $form): Form
     {
         return $form
+            ->columns(1)
             ->schema([
                 Forms\Components\TextInput::make('title')
                     ->required(),
-                Forms\Components\TextInput::make('url')
-                    ->required(),
-                Forms\Components\DatePicker::make('expiration_date')
-                    ->required(),
-                Forms\Components\Select::make('client_id')
-                    ->relationship('clients', 'username')
-                    // ->searchable()
+                Forms\Components\TextInput::make('description')
                     ->required(),
             ]);
     }
@@ -42,13 +37,8 @@ class DocumentResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('url')
+                Tables\Columns\TextColumn::make('description')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('expiration_date')
-                    ->date()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('client_id')
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -75,7 +65,7 @@ class DocumentResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageDocuments::route('/'),
+            'index' => Pages\ManageServicesLists::route('/'),
         ];
     }
 }

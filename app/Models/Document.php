@@ -21,6 +21,6 @@ class Document extends Model
 
     public function clients(): BelongsTo
     {
-        return $this->belongsTo(Client::class);
+        return $this->belongsTo(Client::class, 'client_id');
     }
 }

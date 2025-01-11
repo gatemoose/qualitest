@@ -22,7 +22,7 @@
                         Já é cliente?
                     </h3>
                     <a href='/login' wire:navigate>
-                        <h3 class="hover:underline font-normal text-gray-500 md:text-lg lg:text-xl dark:text-gray-300">
+                        <h3 class="hover:underline dark:hover:text-white text-gray-500 md:text-lg lg:text-xl dark:text-gray-300">
                             Faça login clicando aqui!
                         </h3>
                     </a>

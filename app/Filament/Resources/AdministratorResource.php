@@ -17,11 +17,12 @@ class AdministratorResource extends Resource
 {
     protected static ?string $model = Administrator::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
     public static function form(Form $form): Form
     {
         return $form
+            ->columns(1)
             ->schema([
                 Forms\Components\TextInput::make('username')
                     ->required(),

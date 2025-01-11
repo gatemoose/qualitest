@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\DocumentResource\Pages;
-use App\Filament\Resources\DocumentResource\RelationManagers;
-use App\Models\Document;
+use App\Filament\Resources\ContactPageResource\Pages;
+use App\Filament\Resources\ContactPageResource\RelationManagers;
+use App\Models\ContactPage;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,25 +13,28 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class DocumentResource extends Resource
+class ContactPageResource extends Resource
 {
-    protected static ?string $model = Document::class;
+    protected static ?string $model = ContactPage::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-document';
+    protected static ?string $navigationIcon = 'heroicon-o-phone-arrow-down-left';
 
     public static function form(Form $form): Form
     {
         return $form
+            ->columns(1)
             ->schema([
-                Forms\Components\TextInput::make('title')
+                Forms\Components\TextInput::make('address')
                     ->required(),
-                Forms\Components\TextInput::make('url')
+                Forms\Components\TextInput::make('phone')
+                    ->tel()
                     ->required(),
-                Forms\Components\DatePicker::make('expiration_date')
+                Forms\Components\TextInput::make('email')
+                    ->email()
                     ->required(),
-                Forms\Components\Select::make('client_id')
-                    ->relationship('clients', 'username')
-                    // ->searchable()
+                Forms\Components\TextInput::make('google_maps_embedding')
+                    ->required(),
+                Forms\Components\TextInput::make('social_media')
                     ->required(),
             ]);
     }
@@ -40,15 +43,16 @@ class DocumentResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')
+                Tables\Columns\TextColumn::make('address')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('url')
+                Tables\Columns\TextColumn::make('phone')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('expiration_date')
-                    ->date()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('client_id')
-                    ->sortable(),
+                Tables\Columns\TextColumn::make('email')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('google_maps_embedding')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('social_media')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -75,7 +79,7 @@ class DocumentResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageDocuments::route('/'),
+            'index' => Pages\ManageContactPages::route('/'),
         ];
     }
 }

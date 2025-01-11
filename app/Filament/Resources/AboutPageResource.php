@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\DocumentResource\Pages;
-use App\Filament\Resources\DocumentResource\RelationManagers;
-use App\Models\Document;
+use App\Filament\Resources\AboutPageResource\Pages;
+use App\Filament\Resources\AboutPageResource\RelationManagers;
+use App\Models\AboutPage;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,25 +13,30 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class DocumentResource extends Resource
+class AboutPageResource extends Resource
 {
-    protected static ?string $model = Document::class;
+    protected static ?string $model = AboutPage::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-document';
+    protected static ?string $navigationIcon = 'heroicon-o-at-symbol';
 
     public static function form(Form $form): Form
     {
         return $form
+            ->columns(1)
             ->schema([
-                Forms\Components\TextInput::make('title')
+                Forms\Components\Rich::make('mission')
                     ->required(),
-                Forms\Components\TextInput::make('url')
+                Forms\Components\Rich::make('values')
                     ->required(),
-                Forms\Components\DatePicker::make('expiration_date')
+                Forms\Components\Rich::make('vision')
                     ->required(),
-                Forms\Components\Select::make('client_id')
-                    ->relationship('clients', 'username')
-                    // ->searchable()
+                Forms\Components\Rich::make('patricia')
+                    ->required(),
+                Forms\Components\Rich::make('additional_qualifications')
+                    ->required(),
+                Forms\Components\Rich::make('professional_experience')
+                    ->required(),
+                Forms\Components\Rich::make('history')
                     ->required(),
             ]);
     }
@@ -40,15 +45,20 @@ class DocumentResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')
+                Tables\Columns\TextColumn::make('mission')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('url')
+                Tables\Columns\TextColumn::make('values')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('expiration_date')
-                    ->date()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('client_id')
-                    ->sortable(),
+                Tables\Columns\TextColumn::make('vision')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('patricia')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('additional_qualifications')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('professional_experience')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('history')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -75,7 +85,7 @@ class DocumentResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageDocuments::route('/'),
+            'index' => Pages\ManageAboutPages::route('/'),
         ];
     }
 }
