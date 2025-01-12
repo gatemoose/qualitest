@@ -44,14 +44,19 @@ class ContactPageResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('address')
+                    ->limit(10)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('phone')
+                    ->limit(10)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email')
+                    ->limit(10)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('google_maps_embedding')
+                    ->limit(10)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('social_media')
+                    ->limit(10)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

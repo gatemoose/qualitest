@@ -38,10 +38,13 @@ class HomePageResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('initial_description')
+                    ->limit(15)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('why_qualitest')
+                    ->limit(15)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('our_values')
+                    ->limit(15)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

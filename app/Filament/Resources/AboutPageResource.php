@@ -24,19 +24,19 @@ class AboutPageResource extends Resource
         return $form
             ->columns(1)
             ->schema([
-                Forms\Components\Rich::make('mission')
+                Forms\Components\TextInput::make('mission')
                     ->required(),
-                Forms\Components\Rich::make('values')
+                Forms\Components\TextInput::make('values')
                     ->required(),
-                Forms\Components\Rich::make('vision')
+                Forms\Components\TextInput::make('vision')
                     ->required(),
-                Forms\Components\Rich::make('patricia')
+                Forms\Components\TextInput::make('patricia')
                     ->required(),
-                Forms\Components\Rich::make('additional_qualifications')
+                Forms\Components\TextInput::make('additional_qualifications')
                     ->required(),
-                Forms\Components\Rich::make('professional_experience')
+                Forms\Components\TextInput::make('professional_experience')
                     ->required(),
-                Forms\Components\Rich::make('history')
+                Forms\Components\TextInput::make('history')
                     ->required(),
             ]);
     }

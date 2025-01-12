@@ -43,12 +43,13 @@ class DocumentResource extends Resource
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('url')
+                    ->limit(20)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('expiration_date')
-                    ->date()
+                    ->dateTime('d/m/y')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('client_id')
-                    ->sortable(),
+                Tables\Columns\TextColumn::make('clients.username') // Mostra o nome ao invés do ID.
+                    ->sortable(), 
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

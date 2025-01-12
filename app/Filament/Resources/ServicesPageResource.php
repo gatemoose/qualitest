@@ -26,11 +26,14 @@ class ServicesPageResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('blue_phrase')
                     ->required(),
-                Forms\Components\TextInput::make('text1')
+                Forms\Components\Textarea::make('text1')
+                    ->rows(3)
                     ->required(),
-                Forms\Components\TextInput::make('text2')
+                Forms\Components\Textarea::make('text2')
+                    ->rows(3)
                     ->required(),
-                Forms\Components\TextInput::make('text3')
+                Forms\Components\Textarea::make('text3')
+                    ->rows(3)
                     ->required(),
             ]);
     }

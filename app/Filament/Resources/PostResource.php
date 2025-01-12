@@ -17,7 +17,7 @@ class PostResource extends Resource
 {
     protected static ?string $model = Post::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-pencil-square';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
     {
@@ -26,9 +26,12 @@ class PostResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('title')
                     ->required(),
-                Forms\Components\Textarea::make('description')
+                Forms\Components\Textarea::make('description')->rows(2)
                     ->required(),
-                Forms\Components\Textarea::make('content')
+                Forms\Components\Textarea::make('content')->rows(4)
+                    ->required(),
+                Forms\Components\FileUpload::make('image')
+                    ->image()
                     ->required(),
                 Forms\Components\TextInput::make('tag')
                     ->required(),
@@ -47,6 +50,7 @@ class PostResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('content')
                     ->searchable(),
+                Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('tag')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('city')

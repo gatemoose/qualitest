@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title', 50);
             $table->string('description', 100);
             $table->string('content', 512);
+            $table->string('image', 255);
             $table->string('tag', 50);
             $table->string('city', 50);
             $table->timestamps();
