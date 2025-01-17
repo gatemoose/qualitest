@@ -16,6 +16,10 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class AboutPageResource extends Resource
 {
     protected static ?string $model = AboutPage::class;
+    protected static ?string $modelLabel = 'PÁG Sobre';
+    protected static ?string $pluralModelLabel = 'PÁGS Sobre';
+
+    protected static ?string $navigationGroup = 'Páginas';
 
     protected static ?string $navigationIcon = 'heroicon-o-at-symbol';
 

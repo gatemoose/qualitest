@@ -16,6 +16,10 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class ContactPageResource extends Resource
 {
     protected static ?string $model = ContactPage::class;
+    protected static ?string $modelLabel = 'PÁG Contato';
+    protected static ?string $pluralModelLabel = 'PÁGS Contato';
+
+    protected static ?string $navigationGroup = 'Páginas';
 
     protected static ?string $navigationIcon = 'heroicon-o-phone-arrow-down-left';
 

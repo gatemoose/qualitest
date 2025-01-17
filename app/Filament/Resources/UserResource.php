@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\AdministratorResource\Pages;
-use App\Filament\Resources\AdministratorResource\RelationManagers;
-use App\Models\Administrator;
+use App\Filament\Resources\UserResource\Pages;
+use App\Filament\Resources\UserResource\RelationManagers;
+use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,11 +13,11 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class AdministratorResource extends Resource
+class UserResource extends Resource
 {
-    protected static ?string $model = Administrator::class;
-    protected static ?string $modelLabel = 'Administrador';
-    protected static ?string $pluralModelLabel = 'Administradores';
+    protected static ?string $model = User::class;
+    protected static ?string $modelLabel = 'Administrador 2';
+    protected static ?string $pluralModelLabel = 'Administradores 2';
 
     protected static ?string $navigationGroup = 'Administrativo';
     
@@ -26,10 +26,15 @@ class AdministratorResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->columns(2)
             ->schema([
-                Forms\Components\TextInput::make('username')
+                Forms\Components\TextInput::make('name')
                     ->required(),
+                Forms\Components\TextInput::make('email')
+                    ->email()
+                    ->required(),
+                Forms\Components\DateTimePicker::make('email_verified_at')
+                    ->nullable()
+                    ->hidden(),
                 Forms\Components\TextInput::make('password')
                     ->password()
                     ->required(),
@@ -40,8 +45,14 @@ class AdministratorResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('username')
+                Tables\Columns\TextColumn::make('name')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('email')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('email_verified_at')
+                    ->dateTime()
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -68,7 +79,7 @@ class AdministratorResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageAdministrators::route('/'),
+            'index' => Pages\ManageUsers::route('/'),
         ];
     }
 }

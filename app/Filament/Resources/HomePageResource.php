@@ -16,6 +16,10 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class HomePageResource extends Resource
 {
     protected static ?string $model = HomePage::class;
+    protected static ?string $modelLabel = 'PÁG Home';
+    protected static ?string $pluralModelLabel = 'PÁGS Home';
+
+    protected static ?string $navigationGroup = 'Páginas';
 
     protected static ?string $navigationIcon = 'heroicon-o-home';
 

@@ -16,7 +16,11 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class ServicesPageResource extends Resource
 {
     protected static ?string $model = ServicesPage::class;
+    protected static ?string $modelLabel = 'PÁG Serviço';
+    protected static ?string $pluralModelLabel = 'PÁGS Serviços';
 
+    protected static ?string $navigationGroup = 'Páginas';
+    
     protected static ?string $navigationIcon = 'heroicon-o-square-3-stack-3d';
 
     public static function form(Form $form): Form

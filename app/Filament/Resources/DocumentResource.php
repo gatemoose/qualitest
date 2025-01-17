@@ -16,16 +16,25 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class DocumentResource extends Resource
 {
     protected static ?string $model = Document::class;
+    protected static ?string $modelLabel = 'Documento';
+    protected static ?string $pluralModelLabel = 'Documentos';
+
+    protected static ?string $navigationGroup = 'Cliente';
 
     protected static ?string $navigationIcon = 'heroicon-o-document';
 
     public static function form(Form $form): Form
     {
         return $form
+            ->columns(1)
             ->schema([
                 Forms\Components\TextInput::make('title')
                     ->required(),
-                Forms\Components\TextInput::make('url')
+                Forms\Components\FileUpload::make('url')
+                    // ->disk('s3')
+                    // ->visibility('private')
+                    // ->multiple() // Alterar o $casts do Model para Array.
+                    ->directory('documents')
                     ->required(),
                 Forms\Components\DatePicker::make('expiration_date')
                     ->required(),

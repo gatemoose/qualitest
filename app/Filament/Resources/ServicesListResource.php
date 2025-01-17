@@ -16,6 +16,10 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class ServicesListResource extends Resource
 {
     protected static ?string $model = ServicesList::class;
+    protected static ?string $modelLabel = 'Lista de Serviços';
+    protected static ?string $pluralModelLabel = 'Listas de Serviços';
+
+    protected static ?string $navigationGroup = 'Páginas';
 
     protected static ?string $navigationIcon = 'heroicon-o-wrench-screwdriver';
 

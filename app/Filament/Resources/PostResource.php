@@ -16,8 +16,12 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class PostResource extends Resource
 {
     protected static ?string $model = Post::class;
+    protected static ?string $modelLabel = 'Publicação';
+    protected static ?string $pluralModelLabel = 'Publicações';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Administrativo';
+
+    protected static ?string $navigationIcon = 'heroicon-o-pencil-square';
 
     public static function form(Form $form): Form
     {
@@ -46,11 +50,11 @@ class PostResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('description')
+                Tables\Columns\TextColumn::make('description')->limit(10)
                     ->searchable(),
-                Tables\Columns\TextColumn::make('content')
+                Tables\Columns\TextColumn::make('content')->limit(20)
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('image')->circular(),
                 Tables\Columns\TextColumn::make('tag')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('city')
