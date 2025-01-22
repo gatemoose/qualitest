@@ -6,16 +6,42 @@
   <main class="mt-7">
     <div class="mb-4 md:mb-0 w-full mx-auto relative">
       <div class="px-4 lg:px-0">
-        <h2 class="text-4xl font-semibold text-gray-800 dark:text-slate-50 leading-tight py-2 mb-2">
-          Título da postagem
+        <h2 class="text-4xl font-semibold text-gray-800 dark:text-slate-100 leading-tight py-2 mb-2">
+          {!! $post->title !!}
         </h2>
-
       </div>
 
-      <img src="https://images.unsplash.com/photo-1587614387466-0a72ca909e16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80" class="w-full object-cover lg:rounded" style="height: 28em;"/>
+      <img src="{{ Storage::url($post->image) }}" class="w-full object-cover lg:rounded" style="height: 28em;"/>
     </div>
 
-    <div class="flex flex-col lg:flex-row lg:space-x-12">
+    <br>
+
+    <div>
+      <style>
+        * {
+          color: white;
+        }
+        h2 {
+          font-size: 2em;
+          text-decoration: bold;
+          color: white;
+        }
+        h3 {
+          font-size: 1.7em;
+          text-decoration: bold;
+          color: white;
+        }
+        p {
+          font-size: 1em;
+          color: white;
+        }
+        ul {
+          list-style-type: circle;
+        }
+      </style>
+    {!! $post->content !!}
+    </div>
+    <!-- <div class="flex flex-col lg:flex-row lg:space-x-12">
       <div class="px-4 lg:px-0 mt-12 text-gray-700 dark:text-gray-300 text-lg leading-relaxed w-full">
         <p class="pb-6">
           Aqui, ficará o conteúdo da postagem em si. Abaixo, há textos de exemplo, mostrando como ficariam postagens de conteúdo mais extenso.
@@ -60,7 +86,7 @@
 
 
       
-    </div>
+    </div> -->
   </main>
   <!-- main ends here -->
 </div>

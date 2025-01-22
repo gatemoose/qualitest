@@ -36,8 +36,9 @@
                     Faça uma visita
                 </h4>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                    Rua Vicente Valentim do Vale, N° 281, Centro.
-                    Governador Dix-Sept Rosado.
+                    <!-- Rua Vicente Valentim do Vale, N° 281, Centro.
+                    Governador Dix-Sept Rosado. -->
+                    {{ $contact->address }}
                 </p>
               </div>
             </div>
@@ -52,12 +53,15 @@
                 <h4 class="text-gray-800 dark:text-gray-200 text-base font-bold">
                     Entre em contato
                 </h4>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                <!-- <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
                     (84) 9 9666-7342
                 </p>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
                     (99) 9 9999-9999
-                </p>
+                </p> -->
+                <div class='text-sm text-gray-600 dark:text-gray-400 mt-1'>
+                {!! $contact->phone !!}
+                </div>
               </div>
             </div>
 
@@ -72,9 +76,12 @@
                 <h4 class="text-gray-800 dark:text-gray-200 text-base font-bold">
                     Envie um email
                 </h4>
-                <a href="mailto:qualitest@outlook.com.br" class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white" wire:navigate>
+                <!-- <a href="mailto:qualitest@outlook.com.br" class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white" wire:navigate>
                     qualitest@outlook.com.br
-                </a>
+                </a> -->
+                <div class='text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white'>
+                  {!! $contact->email !!}
+                </div>
               </div>
             </div>
 
@@ -88,21 +95,24 @@
                 <h4 class="text-gray-800 dark:text-gray-200 text-base font-bold">
                     Redes sociais
                 </h4>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
-                    <a href="https://www.facebook.com/qualitestEngenharia" wire:navigate>
-                      Facebook
-                    </a>
-                </p>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
-                    <a href="https://www.instagram.com/qualitest.eng/" wire:navigate>
-                      Instagram
-                    </a>
-                </p>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
-                    <a href="https://wa.me/5584996667342" wire:navigate>
-                      Whatsapp
-                    </a>
-                </p>
+                <div class='text-sm text-gray-600 dark:text-gray-400 mt-1 hover:text-white'>
+                  {!! $contact->social_media !!}
+                  <!-- <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
+                      <a href="https://www.facebook.com/qualitestEngenharia" wire:navigate>
+                        Facebook
+                      </a>
+                  </p>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
+                      <a href="https://www.instagram.com/qualitest.eng/" wire:navigate>
+                        Instagram
+                      </a>
+                  </p>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
+                      <a href="https://wa.me/5584996667342" wire:navigate>
+                        Whatsapp
+                      </a>
+                  </p> -->
+                </div>
               </div>
             </div>
           </div>
@@ -116,7 +126,7 @@
 </div>
 <div class="relative w-full h-96">
     <iframe class='absolute top-0 left-0 w-full h-full'
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3971.6994218304494!2d-37.5187926!3d-5.4625001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ba6efdbda7d1bf%3A0x3065ade370ce7bdc!2sR.%20Vicente%20Valentim%20do%20Vale%2C%20281%20-%20Santa%20Catarina%2C%20Gov.%20Dix-Sept%20Rosado%20-%20RN%2C%2059790-000!5e0!3m2!1spt-BR!2sbr!4v1729899218276!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    src="{!! $contact->google_maps_embedding !!}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
-@stop
+@endsection

@@ -5,7 +5,7 @@
                 <div class="flex items-center justify-between w-full md:w-auto">
                     <a href="/" wire:navigate>
                         <span class="sr-only">Qualitest Engenharia</span>
-                        <img class="w-auto h-8 sm:h-10" src="img/logo-no-bg.png" loading="lazy" width="200" height="40">
+                        <img class="w-auto h-8 sm:h-10" src="{{ asset('img/logo-no-bg.png') }}" loading="lazy" width="200" height="40">
                     </a>
                     <div class="flex items-center -mr-2 md:hidden">
                         <button id="hamburger-button" class="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-50 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-50 dark:bg-gray-900 dark:border-gray-700 dark:hover:bg-gray-900 dark:hover:text-white" type="button" aria-expanded="false">

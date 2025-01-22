@@ -12,8 +12,9 @@
             Um pouco da nossa história...
         </h3>
         <p class="mt-6 font-normal text-gray-600 dark:text-gray-300 md:text-lg lg:text-xl">
-            Somos uma empresa fundada em outubro de 2017 pela engenheira idealizadora e responsável técnica <strong>Edilene Patricia da Silva Oliveira</strong>, que traz inovação ao mercado de controle de qualidade de concreto e demais ensaios voltados à área, contando com larga experiência dos seus funcionários no mercado adquirida através de longos anos de atuação na área de obras civis.
-            Contando com equipamentos novos e de excelente qualidade, e profissionais capacitados, podemos atender sua demanda de forma personalizada com rapidez e eficiência.
+            <!-- Somos uma empresa fundada em outubro de 2017 pela engenheira idealizadora e responsável técnica <strong>Edilene Patricia da Silva Oliveira</strong>, que traz inovação ao mercado de controle de qualidade de concreto e demais ensaios voltados à área, contando com larga experiência dos seus funcionários no mercado adquirida através de longos anos de atuação na área de obras civis.
+            Contando com equipamentos novos e de excelente qualidade, e profissionais capacitados, podemos atender sua demanda de forma personalizada com rapidez e eficiência. -->
+            {!! $about['history'] !!}
         </p>
     </div>
 </div>
@@ -36,7 +37,8 @@
                     </h3>
                 </div>
                 <p class="mt-2 font-normal text-gray-600 dark:text-gray-300 md:text-lg lg:text-xl px-4 md:px-0">
-                    Atender às necessidades e expectativas dos nossos clientes na obtenção de resultados e elaboração de parecer técnico, no controle de qualidade dos materiais empregados na construção civil, cumprindo os prazos acordados e garantindo a ausência de desvios nos serviços prestados.
+                    <!-- Atender às necessidades e expectativas dos nossos clientes na obtenção de resultados e elaboração de parecer técnico, no controle de qualidade dos materiais empregados na construção civil, cumprindo os prazos acordados e garantindo a ausência de desvios nos serviços prestados. -->
+                    {!! strip_tags($about['mission'], ['em', 'del', 'span', 'strong']) !!}
                 </p>
             </div>
             <div class="md:text-center sm:text-base">
@@ -53,7 +55,8 @@
                     </h3>
                 </div>
                 <p class="mt-2 font-normal text-gray-600 dark:text-gray-300 md:text-lg lg:text-xl px-4 md:px-0">
-                    Os valores da Qualitest Engenharia incluem a valorização do próximo, qualidade, inovação e cumprimento de prazos. A ética e a responsabilidade garantem ações comprometidas com resultados que beneficiem nossos clientes.
+                    <!-- Os valores da Qualitest Engenharia incluem a valorização do próximo, qualidade, inovação e cumprimento de prazos. A ética e a responsabilidade garantem ações comprometidas com resultados que beneficiem nossos clientes. -->
+                    {!! strip_tags($about['values'], ['em', 'del', 'span', 'strong']) !!}
                 </p>
             </div>
             <div class="md:text-center sm:text-base">
@@ -72,7 +75,8 @@
                 </div>
                 <p class="mt-2 font-normal text-gray-600 dark:text-gray-300 md:text-lg lg:text-xl 
                  px-4 md:px-0">
-                    Ser referência em assessoria técnica e controle tecnológico de materiais da construção civil, como concreto e solos, é vital para garantir qualidade e segurança nas obras. Isso envolve técnicas avançadas e um compromisso com a excelência no atendimento, oferecendo soluções eficazes para o mercado.
+                    <!-- Ser referência em assessoria técnica e controle tecnológico de materiais da construção civil, como concreto e solos, é vital para garantir qualidade e segurança nas obras. Isso envolve técnicas avançadas e um compromisso com a excelência no atendimento, oferecendo soluções eficazes para o mercado. -->
+                    {!! strip_tags($about['vision'], ['em', 'del', 'span', 'strong']) !!}
                 </p>
             </div>
         </div>
@@ -89,7 +93,8 @@
                     Edilene Patrícia da Silva Oliveira
                 </h2>
                 <p class="max-w-lg mt-3 font-normal text-gray-600 dark:text-gray-300 md:mt-8 md:text-lg lg:text-xl mb-3 md:mb-8">
-                    Edilene Patrícia da Silva Oliveira é a Técnica em Edificações e Engenheira Civil registrada no CREA (210703637-3) que ocupa a posição de Responsável Técnica na QualiTest Engenharia e Assessoria Técnica. Com especialização em Dimensionamento, Patologia, Terapia e Tecnologia em Estruturas de Concreto, Edilene possui uma sólida formação complementar, que inclui cursos em revestimento cerâmico, manutenção predial e diversos simpósios na área da construção civil.
+                    <!-- Edilene Patrícia da Silva Oliveira é a Técnica em Edificações e Engenheira Civil registrada no CREA (210703637-3) que ocupa a posição de Responsável Técnica na QualiTest Engenharia e Assessoria Técnica. Com especialização em Dimensionamento, Patologia, Terapia e Tecnologia em Estruturas de Concreto, Edilene possui uma sólida formação complementar, que inclui cursos em revestimento cerâmico, manutenção predial e diversos simpósios na área da construção civil. -->
+                    {!! strip_tags($about['patricia'], ['em', 'del', 'span', 'strong']) !!}
                 </p>
             </div>
 
@@ -98,11 +103,21 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
-            <ul class="font-normal text-gray-600 dark:text-gray-300 gap-4 list-disc">
-                <h3 class="text-xl font-bold leading-tight dark:text-white">
-                    Atuação Profissional
-                </h3>
+        <div>
+
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 font-normal text-gray-600 dark:text-gray-300">
+            <style>
+                ul {
+                    list-style-type: disc;
+                };
+            </style>
+            <div>
+            <h3 class="text-xl font-bold leading-tight dark:text-white column-span-3">
+                Atuação Profissional
+            </h3>
+            <!-- <ul>
                 <li>Monitoria do Laboratório de Construção Civil IFRN Mossoró</li>
                 <li>Técnica em Edificações Metro Quadrado Construções e Serviços</li>
                 <li>Técnica em Edificações 3B Serviços e Construções</li>
@@ -112,29 +127,34 @@
                 <li>Supervisora de Laboratório Consultest Engenharia e Serviços – Controle tecnológico da construção da fábrica de Cimentos Mizú – Baraúna RN</li>
                 <li>Técnica de Planejamento e Diligenciamento Sigmatec</li>
                 <li>Responsável Técnica QualiTest Engenharia e Assessoria Técnica</li>
-            </ul>
-            <ul class="font-normal text-gray-600 dark:text-gray-300 gap-4 list-disc">
+            </ul> -->
+            {!! $about['additional_qualifications'] !!}
+            </div>
+            <div>
                 <h3 class="text-xl font-bold leading-tight dark:text-white">
                     Qualificação Complementar
                 </h3>
-                <li>Sistema de Revestimento Cerâmico – IFRN Mossoró</li>
-                <li>Manutenção Predial – IFRN Mossoró</li>
-                <li>1º Simpósio da Construção Civil – IFRN Mossoró</li>
-                <li>2º Simpósio da Construção Civil – IFRN Mossoró</li>
-                <li>Ciclo de Palestras da Construção Civil – IFRN Natal</li>
-                <li>MicroStation 2D – IFRN Mossoró</li>
-                <li>Planejando a Construção</li>
-                <li>Curso de Orientação Profissional</li>
-                <li>Curso de Gestão de Qualidade Ampla</li>
-                <li>Primeiros Socorros – UNP</li>
-                <li>Combate a Incêndio – UNP</li>
-                <li>NR10 – Instalações e Serviços em Eletricidade – UNP</li>
-                <li>Segurança em Atividades de Petróleo e Gás – UNP</li>
-                <li>Higiene Ocupacional – UNP</li>
-            </ul>
+                <!-- <ul>
+                    <li>Sistema de Revestimento Cerâmico – IFRN Mossoró</li>
+                    <li>Manutenção Predial – IFRN Mossoró</li>
+                    <li>1º Simpósio da Construção Civil – IFRN Mossoró</li>
+                    <li>2º Simpósio da Construção Civil – IFRN Mossoró</li>
+                    <li>Ciclo de Palestras da Construção Civil – IFRN Natal</li>
+                    <li>MicroStation 2D – IFRN Mossoró</li>
+                    <li>Planejando a Construção</li>
+                    <li>Curso de Orientação Profissional</li>
+                    <li>Curso de Gestão de Qualidade Ampla</li>
+                    <li>Primeiros Socorros – UNP</li>
+                    <li>Combate a Incêndio – UNP</li>
+                    <li>NR10 – Instalações e Serviços em Eletricidade – UNP</li>
+                    <li>Segurança em Atividades de Petróleo e Gás – UNP</li>
+                    <li>Higiene Ocupacional – UNP</li>
+                </ul> -->
+                {!! $about['professional_experience'] !!}
+            </div>
 </div>
 
     </div>
 </section>
 
-@stop
+@endsection

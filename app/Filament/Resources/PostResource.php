@@ -30,9 +30,10 @@ class PostResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('title')
                     ->required(),
-                Forms\Components\Textarea::make('description')->rows(2)
+                Forms\Components\Textarea::make('description')->rows(3)
                     ->required(),
-                Forms\Components\Textarea::make('content')->rows(4)
+                Forms\Components\RichEditor::make('content')
+                    ->fileAttachmentsDisk('public')
                     ->required(),
                 Forms\Components\FileUpload::make('image')
                     ->image()

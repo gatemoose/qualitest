@@ -30,14 +30,35 @@ class ServicesPageResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('blue_phrase')
                     ->required(),
-                Forms\Components\Textarea::make('text1')
-                    ->rows(3)
+                Forms\Components\RichEditor::make('text1')
+                    ->toolbarButtons([
+                        'bold',
+                        'italic',
+                        'strike',
+                        'underline',
+                        'redo',
+                        'undo'
+                    ])
                     ->required(),
-                Forms\Components\Textarea::make('text2')
-                    ->rows(3)
+                Forms\Components\RichEditor::make('text2')
+                    ->toolbarButtons([
+                        'bold',
+                        'italic',
+                        'strike',
+                        'underline',
+                        'redo',
+                        'undo'
+                    ])
                     ->required(),
-                Forms\Components\Textarea::make('text3')
-                    ->rows(3)
+                Forms\Components\RichEditor::make('text3')
+                    ->toolbarButtons([
+                        'bold',
+                        'italic',
+                        'strike',
+                        'underline',
+                        'redo',
+                        'undo'
+                    ])
                     ->required(),
             ]);
     }
@@ -45,34 +66,35 @@ class ServicesPageResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->paginated(false)
             ->columns([
                 Tables\Columns\TextColumn::make('blue_phrase')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('text1')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('text2')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('text3')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->html(),
+                // Tables\Columns\TextColumn::make('text1')
+                //     ->searchable(),
+                // Tables\Columns\TextColumn::make('text2')
+                //     ->searchable(),
+                // Tables\Columns\TextColumn::make('text3')
+                //     ->searchable(),
+                // Tables\Columns\TextColumn::make('created_at')
+                //     ->dateTime()
+                //     ->sortable()
+                //     ->toggleable(isToggledHiddenByDefault: true),
+                // Tables\Columns\TextColumn::make('updated_at')
+                //     ->dateTime()
+                //     ->sortable()
+                //     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                // Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    // Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -82,5 +104,10 @@ class ServicesPageResource extends Resource
         return [
             'index' => Pages\ManageServicesPages::route('/'),
         ];
+    }
+
+    public static function canCreate(): bool
+    {
+        return false; // Disable the "Create" button
     }
 }

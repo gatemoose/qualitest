@@ -30,16 +30,30 @@ class ContactPageResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('address')
                     ->required(),
-                Forms\Components\TextInput::make('phone')
-                    ->tel()
-                    ->required(),
+                Forms\Components\RichEditor::make('phone')
+                    ->toolbarButtons([
+                        'bold',
+                        'italic',
+                        'strike',
+                        'underline',
+                        'redo',
+                        'undo'
+                    ])->required(),
                 Forms\Components\TextInput::make('email')
                     ->email()
                     ->required(),
                 Forms\Components\TextInput::make('google_maps_embedding')
                     ->required(),
-                Forms\Components\TextInput::make('social_media')
-                    ->required(),
+                Forms\Components\RichEditor::make('social_media')
+                    ->toolbarButtons([
+                        'bold',
+                        'italic',
+                        'strike',
+                        'underline',
+                        'link',
+                        'redo',
+                        'undo'
+                    ])->required(),
             ]);
     }
 

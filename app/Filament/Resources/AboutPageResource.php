@@ -28,19 +28,72 @@ class AboutPageResource extends Resource
         return $form
             ->columns(1)
             ->schema([
-                Forms\Components\TextInput::make('mission')
+                Forms\Components\RichEditor::make('mission')
+                    ->toolbarButtons([
+                        'bold',
+                        'italic',
+                        'strike',
+                        'underline',
+                        'redo',
+                        'undo'
+                    ])->required(),
+                Forms\Components\RichEditor::make('values')
+                    ->toolbarButtons([
+                        'bold',
+                        'italic',
+                        'strike',
+                        'underline',
+                        'redo',
+                        'undo'
+                    ])->required(),
+                Forms\Components\RichEditor::make('vision')
+                    ->toolbarButtons([
+                        'bold',
+                        'italic',
+                        'strike',
+                        'underline',
+                        'redo',
+                        'undo'
+                    ])->required(),
+                Forms\Components\RichEditor::make('patricia')
+                    ->toolbarButtons([
+                        'bold',
+                        'italic',
+                        'strike',
+                        'underline',
+                        'redo',
+                        'undo'
+                    ])->required(),
+                Forms\Components\RichEditor::make('additional_qualifications')
+                    ->toolbarButtons([
+                        'bold',
+                        'italic',
+                        'strike',
+                        'underline',
+                        'bulletList',
+                        'redo',
+                        'undo'
+                    ])->required(),
+                Forms\Components\RichEditor::make('professional_experience')
+                    ->toolbarButtons([
+                        'bold',
+                        'italic',
+                        'strike',
+                        'underline',
+                        'bulletList',
+                        'redo',
+                        'undo'
+                    ])
                     ->required(),
-                Forms\Components\TextInput::make('values')
-                    ->required(),
-                Forms\Components\TextInput::make('vision')
-                    ->required(),
-                Forms\Components\TextInput::make('patricia')
-                    ->required(),
-                Forms\Components\TextInput::make('additional_qualifications')
-                    ->required(),
-                Forms\Components\TextInput::make('professional_experience')
-                    ->required(),
-                Forms\Components\TextInput::make('history')
+                Forms\Components\RichEditor::make('history')
+                    ->toolbarButtons([
+                        'bold',
+                        'italic',
+                        'strike',
+                        'underline',
+                        'redo',
+                        'undo'
+                    ])
                     ->required(),
             ]);
     }
@@ -48,42 +101,51 @@ class AboutPageResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->paginated(false)
             ->columns([
-                Tables\Columns\TextColumn::make('mission')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('values')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('vision')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('patricia')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('additional_qualifications')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('professional_experience')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('history')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('mission')->words(10)
+                    ->html(),
+                // Tables\Columns\TextColumn::make('values')->words(10)
+                //     ->html()
+                //     ->searchable(),
+                // Tables\Columns\TextColumn::make('vision')->words(10)
+                //     ->html()
+                //     ->searchable(),
+                // Tables\Columns\TextColumn::make('patricia')->words(10)
+                //     ->html()
+                //     ->searchable(),
+                // Tables\Columns\TextColumn::make('additional_qualifications')
+                //     ->html()
+                //     ->words(10)
+                //     ->searchable(),
+                // Tables\Columns\TextColumn::make('professional_experience')
+                //     ->html()
+                //     ->words(10)
+                //     ->searchable(),
+                // Tables\Columns\TextColumn::make('history')->words(10)
+                //     ->html()
+                //     ->searchable(),
+                // Tables\Columns\TextColumn::make('created_at')
+                //     ->dateTime()
+                //     ->sortable()
+                //     ->toggleable(isToggledHiddenByDefault: true),
+                // Tables\Columns\TextColumn::make('updated_at')
+                //     ->dateTime()
+                //     ->sortable()
+                //     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                // Tables\Actions\DeleteAction::make(),
             ]);
+            // ->bulkActions([
+            //     Tables\Actions\BulkActionGroup::make([
+            //         // Tables\Actions\DeleteBulkAction::make(),
+            //     ]),
+            // ]);
     }
 
     public static function getPages(): array
@@ -91,5 +153,10 @@ class AboutPageResource extends Resource
         return [
             'index' => Pages\ManageAboutPages::route('/'),
         ];
+    }
+
+    public static function canCreate(): bool
+    {
+        return false; // Disable the "Create" button
     }
 }
