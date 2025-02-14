@@ -9,7 +9,7 @@
       <div class="lg:pr-8 lg:pt-4">
         <div class="lg:max-w-lg">
           <h2 class="text-base text-sm md:text-lg font-semibold leading-7 text-blue-500">
-            {{ $services->blue_phrase }}
+            {{ $services['blue_phrase'] ?? 'undefined' }}
           </h2>
           <p class="mt-2 text-2xl font-bold tracking-tight text-gray-600 dark:text-gray-100 sm:text-4xl">
             Quais serviços oferecemos?
@@ -22,7 +22,7 @@
                   <path d="M3.196 8.87l-.825.483a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.758 0l7.25-4.25a.75.75 0 000-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 01-2.276 0L3.196 8.87z"></path>
                   <path d="M10.38 1.103a.75.75 0 00-.76 0l-7.25 4.25a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.76 0l7.25-4.25a.75.75 0 000-1.294l-7.25-4.25z"></path>
                 </svg>
-                {!! $services->text1 !!}
+                {!! $services->text1 ?? 'undefined' !!}
               </dt>
               <!-- <dd class="inline font-normal dark:text-gray-300">
                 um serviço que contempla uma variedade de ensaios, trazendo comodidade e segurança aos nossos clientes.
@@ -33,7 +33,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute left-1 top-1 h-5 w-5 text-blue-500">
                   <path fill-rule="evenodd" d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z" clip-rule="evenodd"></path>
                 </svg>
-                {!! $services->text2 !!}
+                {!! $services->text2 ?? 'undefined' !!}
               </dt>
               <!-- <dd class="inline font-normal dark:text-gray-300">
                 é a manifestação especializada sobre determinado assunto, no nosso caso a real situação de uma edificação quando se trata de parecer técnico de obras civis.
@@ -45,7 +45,7 @@
                   <path fill-rule="evenodd" d="M14.5 10a4.5 4.5 0 004.284-5.882c-.105-.324-.51-.391-.752-.15L15.34 6.66a.454.454 0 01-.493.11 3.01 3.01 0 01-1.618-1.616.455.455 0 01.11-.494l2.694-2.692c.24-.241.174-.647-.15-.752a4.5 4.5 0 00-5.873 4.575c.055.873-.128 1.808-.8 2.368l-7.23 6.024a2.724 2.724 0 103.837 3.837l6.024-7.23c.56-.672 1.495-.855 2.368-.8.096.007.193.01.291.01zM5 16a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd"></path>
                   <path d="M14.5 11.5c.173 0 .345-.007.514-.022l3.754 3.754a2.5 2.5 0 01-3.536 3.536l-4.41-4.41 2.172-2.607c.052-.063.147-.138.342-.196.202-.06.469-.087.777-.067.128.008.257.012.387.012zM6 4.586l2.33 2.33a.452.452 0 01-.08.09L6.8 8.214 4.586 6H3.309a.5.5 0 01-.447-.276l-1.7-3.402a.5.5 0 01.093-.577l.49-.49a.5.5 0 01.577-.094l3.402 1.7A.5.5 0 016 3.31v1.277z"></path>
                 </svg>
-                {!! $services->text3 !!}
+                {!! $services->text3 ?? 'undefined' !!}
               </dt>
               <!-- <dd class="inline font-normal dark:text-gray-300">
                 fresco endurecido, sejam destrutivos ou não, bem como cimento, argamassa e agregados. 
@@ -76,7 +76,7 @@
             <li>
             <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
             <span class="flex-1 text-base-content dark:text-gray-200">
-                {{ $service['title'] }}
+                {{ $service->title ?? 'undefined' }}
             </span>
             <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                 <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
@@ -86,7 +86,7 @@
             <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
                 <div class="pb-5 leading-tight">
                     <ul class="space-y-1 leading-tight font-normal text-gray-600 font-normal text-gray-600 dark:text-gray-300  list-disc list-inside">
-                        {!! strip_tags($service['description'], ['li']) !!}
+                        {!! strip_tags($service->description ?? 'undefined', ['li']) !!}
                     </ul>
                 </div>
             </div>
@@ -102,7 +102,7 @@
             <li>
             <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
             <span class="flex-1 text-base-content dark:text-gray-200">
-                {{ $service['title'] }}
+                {{ $service->title ?? 'undefined' }}
             </span>
             <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                 <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
@@ -112,7 +112,7 @@
             <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
                 <div class="pb-5 leading-tight">
                     <ul class="space-y-1 leading-tight font-normal text-gray-600 font-normal text-gray-600 dark:text-gray-300 list-disc list-inside">
-                        {!! strip_tags($service['description'], ['li']) !!}
+                        {!! strip_tags($service->description ?? 'undefined', ['li']) !!}
                     </ul>
                 </div>
             </div>

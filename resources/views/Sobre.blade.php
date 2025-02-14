@@ -14,7 +14,7 @@
         <p class="mt-6 font-normal text-gray-600 dark:text-gray-300 md:text-lg lg:text-xl">
             <!-- Somos uma empresa fundada em outubro de 2017 pela engenheira idealizadora e responsável técnica <strong>Edilene Patricia da Silva Oliveira</strong>, que traz inovação ao mercado de controle de qualidade de concreto e demais ensaios voltados à área, contando com larga experiência dos seus funcionários no mercado adquirida através de longos anos de atuação na área de obras civis.
             Contando com equipamentos novos e de excelente qualidade, e profissionais capacitados, podemos atender sua demanda de forma personalizada com rapidez e eficiência. -->
-            {!! $about['history'] !!}
+            {!! $about['history'] ?? 'undefined' !!}
         </p>
     </div>
 </div>
@@ -38,7 +38,7 @@
                 </div>
                 <p class="mt-2 font-normal text-gray-600 dark:text-gray-300 md:text-lg lg:text-xl px-4 md:px-0">
                     <!-- Atender às necessidades e expectativas dos nossos clientes na obtenção de resultados e elaboração de parecer técnico, no controle de qualidade dos materiais empregados na construção civil, cumprindo os prazos acordados e garantindo a ausência de desvios nos serviços prestados. -->
-                    {!! strip_tags($about['mission'], ['em', 'del', 'span', 'strong']) !!}
+                    {!! strip_tags($about['mission'] ?? 'undefined', ['em', 'del', 'span', 'strong']) !!}
                 </p>
             </div>
             <div class="md:text-center sm:text-base">
@@ -56,7 +56,7 @@
                 </div>
                 <p class="mt-2 font-normal text-gray-600 dark:text-gray-300 md:text-lg lg:text-xl px-4 md:px-0">
                     <!-- Os valores da Qualitest Engenharia incluem a valorização do próximo, qualidade, inovação e cumprimento de prazos. A ética e a responsabilidade garantem ações comprometidas com resultados que beneficiem nossos clientes. -->
-                    {!! strip_tags($about['values'], ['em', 'del', 'span', 'strong']) !!}
+                    {!! strip_tags($about['values'] ?? 'undefined', ['em', 'del', 'span', 'strong']) !!}
                 </p>
             </div>
             <div class="md:text-center sm:text-base">
@@ -76,7 +76,7 @@
                 <p class="mt-2 font-normal text-gray-600 dark:text-gray-300 md:text-lg lg:text-xl 
                  px-4 md:px-0">
                     <!-- Ser referência em assessoria técnica e controle tecnológico de materiais da construção civil, como concreto e solos, é vital para garantir qualidade e segurança nas obras. Isso envolve técnicas avançadas e um compromisso com a excelência no atendimento, oferecendo soluções eficazes para o mercado. -->
-                    {!! strip_tags($about['vision'], ['em', 'del', 'span', 'strong']) !!}
+                    {!! strip_tags($about['vision'] ?? 'undefined', ['em', 'del', 'span', 'strong']) !!}
                 </p>
             </div>
         </div>
@@ -94,7 +94,7 @@
                 </h2>
                 <p class="max-w-lg mt-3 font-normal text-gray-600 dark:text-gray-300 md:mt-8 md:text-lg lg:text-xl mb-3 md:mb-8">
                     <!-- Edilene Patrícia da Silva Oliveira é a Técnica em Edificações e Engenheira Civil registrada no CREA (210703637-3) que ocupa a posição de Responsável Técnica na QualiTest Engenharia e Assessoria Técnica. Com especialização em Dimensionamento, Patologia, Terapia e Tecnologia em Estruturas de Concreto, Edilene possui uma sólida formação complementar, que inclui cursos em revestimento cerâmico, manutenção predial e diversos simpósios na área da construção civil. -->
-                    {!! strip_tags($about['patricia'], ['em', 'del', 'span', 'strong']) !!}
+                    {!! strip_tags($about['patricia'] ?? 'undefined', ['em', 'del', 'span', 'strong']) !!}
                 </p>
             </div>
 
@@ -128,7 +128,7 @@
                 <li>Técnica de Planejamento e Diligenciamento Sigmatec</li>
                 <li>Responsável Técnica QualiTest Engenharia e Assessoria Técnica</li>
             </ul> -->
-            {!! $about['additional_qualifications'] !!}
+            {!! $about['additional_qualifications'] ?? 'undefined' !!}
             </div>
             <div>
                 <h3 class="text-xl font-bold leading-tight dark:text-white">
@@ -150,7 +150,7 @@
                     <li>Segurança em Atividades de Petróleo e Gás – UNP</li>
                     <li>Higiene Ocupacional – UNP</li>
                 </ul> -->
-                {!! $about['professional_experience'] !!}
+                {!! $about['professional_experience'] ?? 'undefined' !!}
             </div>
 </div>
 

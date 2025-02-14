@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('documents', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->string('title', 100);
             $table->string('url', 255);
             $table->date('expiration_date');

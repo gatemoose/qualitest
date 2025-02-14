@@ -9,11 +9,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('clients', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->string('name', 255);
             $table->string('email', 255)->unique();
             $table->string('password');
-            $table->string('cnpj', 14)->unique();
+            $table->string('cnpj', 14)->unique()->nullable();
             $table->timestamps();
         });
     }

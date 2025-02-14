@@ -37,6 +37,7 @@ class DocumentsRelationManager extends RelationManager
                     ->required(),
                 Forms\Components\DatePicker::make('expiration_date')
                     ->label('Data de Expiração')
+                    ->minDate(now())
                     ->required(),
                 // Forms\Components\Select::make('client_id')
                 //     ->relationship('clients', 'name')
@@ -51,10 +52,11 @@ class DocumentsRelationManager extends RelationManager
             ->recordTitleAttribute('title')
             ->columns([
                 Tables\Columns\TextColumn::make('title')->label('Título'),
-                Tables\Columns\TextColumn::make('url')->label('Título')
+                Tables\Columns\TextColumn::make('url')->label('Documento')
                 ->url(fn (Document $url): string => asset('storage/' . $url->url))
                 ->openUrlInNewTab(),
                 Tables\Columns\TextColumn::make('expiration_date')
+                    ->label('Data de Expiração')
                     ->dateTime('d/m/Y'),
                 
             ])
@@ -63,16 +65,11 @@ class DocumentsRelationManager extends RelationManager
             ])
             ->headerActions([
                 Tables\Actions\CreateAction::make(),
-
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(), // Baixar PDF pela tabela.
-                // Tables\Actions\Action::make('download')
-                //     ->label('Download')
-                //     ->icon('heroicon-o-download')
-                //     ->url(fn (Document $record): string => route('client.documents.download', $record))
-                //     ->openUrlInNewTab(), // Optional: Open in a new tab
+                Tables\Actions\DeleteAction::make(),
+                // Baixar pdf.
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

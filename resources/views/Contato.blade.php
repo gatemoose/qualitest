@@ -38,7 +38,7 @@
                 <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
                     <!-- Rua Vicente Valentim do Vale, N° 281, Centro.
                     Governador Dix-Sept Rosado. -->
-                    {{ $contact->address }}
+                    {{ $contact->address ?? 'undefined' }}
                 </p>
               </div>
             </div>
@@ -60,7 +60,7 @@
                     (99) 9 9999-9999
                 </p> -->
                 <div class='text-sm text-gray-600 dark:text-gray-400 mt-1'>
-                {!! $contact->phone !!}
+                {!! $contact->phone ?? 'undefined' !!}
                 </div>
               </div>
             </div>
@@ -80,7 +80,7 @@
                     qualitest@outlook.com.br
                 </a> -->
                 <div class='text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white'>
-                  {!! $contact->email !!}
+                  {!! $contact->email ?? 'undefined' !!}
                 </div>
               </div>
             </div>
@@ -96,7 +96,7 @@
                     Redes sociais
                 </h4>
                 <div class='text-sm text-gray-600 dark:text-gray-400 mt-1 hover:text-white'>
-                  {!! $contact->social_media !!}
+                  {!! $contact->social_media ?? 'undefined' !!}
                   <!-- <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
                       <a href="https://www.facebook.com/qualitestEngenharia" wire:navigate>
                         Facebook
@@ -126,7 +126,7 @@
 </div>
 <div class="relative w-full h-96">
     <iframe class='absolute top-0 left-0 w-full h-full'
-    src="{!! $contact->google_maps_embedding !!}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    src="{!! $contact->google_maps_embedding ?? 'undefined' !!}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
 @endsection

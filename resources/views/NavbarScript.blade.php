@@ -32,3 +32,33 @@
 });
 
 </script>
+
+<!-- DROPDOWN BUTTON COMPONENT -->
+<script>
+
+    // Script para mostrar/ocultar o dropdown
+
+    document.getElementById('options-menu').addEventListener('click', function() {
+
+        const dropdown = document.getElementById('dropdown-menu');
+
+        dropdown.classList.toggle('hidden');
+
+    });
+
+
+    // Fechar o dropdown ao clicar fora
+
+    window.addEventListener('click', function(event) {
+
+        const dropdown = document.getElementById('dropdown-menu');
+
+        if (!event.target.closest('.relative')) {
+
+            dropdown.classList.add('hidden');
+
+        }
+
+    });
+
+</script>

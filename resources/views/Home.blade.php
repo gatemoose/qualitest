@@ -22,7 +22,7 @@
                     <h3 class="font-normal text-gray-600 md:text-lg lg:text-xl dark:text-gray-300">
                         Já é cliente?
                     </h3>
-                    <a href='/login' wire:navigate>
+                    <a href='{{ route("docscliente") }}' wire:navigate>
                         <h3 class="hover:underline dark:hover:text-white text-gray-500 md:text-lg lg:text-xl dark:text-gray-300">
                             Faça login clicando aqui!
                         </h3>

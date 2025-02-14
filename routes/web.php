@@ -17,33 +17,33 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientAuthController;
 
 Route::get('/', function () {
-    $home = isset(HomePage::latest()->get()[0]) ? HomePage::latest()->get()[0] : [];
+    $home = HomePage::latest()->first() ?? '';
     $posts = Post::latest()->take(3)->get();
 
     return view('Home', compact('home', 'posts'));
-});
+})->name('home');
 
 Route::get('/sobre', function () {
-    $about = AboutPage::latest()->get()->toArray()[0];
+    $about = AboutPage::latest()->first() ?? [];
 
     return view('Sobre', compact('about'));
-});
+})->name('sobre');
 
 Route::get('/contato', function () {
-    $contact = ContactPage::latest()->get()[0];
+    $contact = ContactPage::latest()->first() ?? [];
 
     return view('Contato', compact('contact'));
-});
+})->name('contato');
 
 Route::get('/servicos', function () {
-    $services = ServicesPage::latest()->get()[0];
+    $services = ServicesPage::latest()->first() ?? [];
     $services_list = ServicesList::all();
     $services_list = $services_list->split(2);
-    $services_list_left = $services_list->get(0);
-    $services_list_right = $services_list->get(1);
+    $services_list_left = $services_list->get(0) ?? [];
+    $services_list_right = $services_list->get(1) ?? [];
 
     return view('Servicos', compact('services', 'services_list_right', 'services_list_left'));
-});
+})->name('servicos');
 
 Route::get('/login', function () {
     return view('Login');
@@ -53,7 +53,7 @@ Route::get('/posts', function () {
     $posts = Post::all();
 
     return view('Posts', compact('posts'));
-});
+})->name('posts');
 
 Route::get('/posts/{id}', function (string $id) {
     $post = Post::find($id);
@@ -74,6 +74,12 @@ Route::prefix('cliente')->middleware('auth:clients')->group(function () {
         }])->first();
         
         $docs = $clients->documents;
+
+        // A data de expiração estava vindo string. Então formatei.
+        // Arquivos sempre vieram expirados após isso.
+        $docs->each(function ($item) {
+            $item->expiration_date = Carbon::parse($item->expiration_date);
+        });
 
         $docs_links = $docs->map(function ($item) {
             $item->link = URL::temporarySignedRoute(

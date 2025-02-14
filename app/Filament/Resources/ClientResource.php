@@ -36,8 +36,10 @@ class ClientResource extends Resource
                     ->email()
                     ->required(),
                 Forms\Components\TextInput::make('password')
+                    ->placeholder('A senha será gerada automaticamente.')
                     ->readonly(),
                 Forms\Components\TextInput::make('cnpj')
+                    ->maxLength(14)
                     ->required(),
             ]);
     }
