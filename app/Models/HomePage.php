@@ -10,6 +10,7 @@ class HomePage extends Model
     use HasFactory;
     
     protected $table = 'home_page';
+    
     protected $fillable = [
         'initial_description',
         'why_qualitest',

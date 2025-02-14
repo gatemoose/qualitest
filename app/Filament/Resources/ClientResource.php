@@ -2,39 +2,42 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ClientResource\Pages;
-use App\Filament\Resources\ClientResource\RelationManagers;
-use App\Models\Client;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Client;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Builder;
+// use RelationManagers\DocumentsRelationManager;
+use App\Filament\Resources\ClientResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\ClientResource\RelationManagers;
+// use App\Filament\Resources\ClientResource\RelationManagers;
 
 class ClientResource extends Resource
 {
     protected static ?string $model = Client::class;
+
+    protected static ?string $navigationIcon = 'heroicon-o-user-plus';
+
     protected static ?string $modelLabel = 'Cliente';
     protected static ?string $pluralModelLabel = 'Clientes';
 
     protected static ?string $navigationGroup = 'Cliente';
 
-    protected static ?string $navigationIcon = 'heroicon-o-user-plus';
-
     public static function form(Form $form): Form
     {
         return $form
-            ->columns(1)
             ->schema([
-                Forms\Components\TextInput::make('username')
+                Forms\Components\TextInput::make('name')
                     ->required(),
                 Forms\Components\TextInput::make('email')
                     ->email()
                     ->required(),
                 Forms\Components\TextInput::make('password')
-                    ->password()
+                    ->readonly(),
+                Forms\Components\TextInput::make('cnpj')
                     ->required(),
             ]);
     }
@@ -43,9 +46,11 @@ class ClientResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('username')
+                Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('cnpj')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -61,7 +66,6 @@ class ClientResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -70,10 +74,19 @@ class ClientResource extends Resource
             ]);
     }
 
+    public static function getRelations(): array
+    {
+        return [
+            RelationManagers\DocumentsRelationManager::class,
+        ];
+    }
+
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageClients::route('/'),
+            'index' => Pages\ListClients::route('/'),
+            'create' => Pages\CreateClient::route('/create'),
+            'edit' => Pages\EditClient::route('/{record}/edit'),
         ];
     }
 }

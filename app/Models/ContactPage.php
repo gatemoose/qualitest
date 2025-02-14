@@ -10,6 +10,7 @@ class ContactPage extends Model
     use HasFactory;
     
     protected $table = 'contact_page';
+    
     protected $fillable = [
         'address',
         'phone',

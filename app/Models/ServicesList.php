@@ -11,6 +11,7 @@ class ServicesList extends Model
     use HasFactory;
     
     protected $table = 'services_list';
+    
     protected $fillable = [
         'title',
         'description',

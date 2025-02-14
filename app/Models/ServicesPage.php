@@ -11,6 +11,7 @@ class ServicesPage extends Model
     use HasFactory;
     
     protected $table = 'services_page';
+    
     protected $fillable = [
         'blue_phrase',
         'text1',

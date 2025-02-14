@@ -11,7 +11,7 @@
             </h1>
             <p class="max-w-3xl mb-6 font-normal text-gray-600 dark:text-gray-300 lg:mb-8 md:text-lg lg:text-xl lg:pr-4">
                 <!-- A Qualitest Engenharia é uma empresa líder em sondagens SPT e controle tecnológico de concreto. Especializada em fornecer dados precisos sobre a composição do solo e garantir a qualidade dos materiais de construção, a Qualitest assegura a excelência e a segurança dos projetos civis. Com uma equipe altamente qualificada e tecnologia de ponta, a empresa se destaca pela confiabilidade e precisão em todos os seus serviços. -->
-                {!! strip_tags($home['initial_description'],  ['em', 'del', 'span', 'strong']) !!}
+                {!! strip_tags($home['initial_description'] ?? 'undefined',  ['em', 'del', 'span', 'strong']) !!}
             </p>
             <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
                 <div class="flex justify-start gap-4">
@@ -49,7 +49,7 @@
             </h3>
             <p class="sm:text-lg mt-6 font-normal text-gray-600 dark:text-gray-300">
                 <!-- Escolher a nossa empresa significa optar por inovação e expertise no controle de qualidade de concreto e ensaios relacionados. Contamos com uma equipe altamente qualificada, cujos anos de experiência no setor de obras civis garantem resultados confiáveis e precisos. Nossa abordagem é focada na excelência e na melhoria contínua, oferecendo soluções que não apenas atendem, mas superam as expectativas dos nossos clientes. Com a gente, você tem a certeza de que seus projetos estarão sempre em boas mãos. -->
-                {!! strip_tags($home['why_qualitest'],  ['em', 'del', 'span', 'strong']) !!}
+                {!! strip_tags($home['why_qualitest'] ?? 'undefined',  ['em', 'del', 'span', 'strong']) !!}
             </p>
         </div>
     </div>
@@ -64,7 +64,7 @@
             </h3>
             <p class="sm:text-lg mt-6 font-normal text-gray-600 dark:text-gray-300">
                 <!-- Nossos valores são centrados em atender às necessidades e expectativas dos clientes, garantindo resultados excepcionais e pareceres técnicos precisos. Comprometemo-nos a cumprir prazos acordados e a assegurar a qualidade dos materiais utilizados na construção civil, sempre mantendo a integridade e a transparência em nossos serviços. -->
-                {!! strip_tags($home['our_values'],  ['em', 'del', 'span', 'strong']) !!}
+                {!! strip_tags($home['our_values'] ?? 'undefined',  ['em', 'del', 'span', 'strong']) !!}
             </p>
         </div>
     </div>
@@ -103,7 +103,7 @@
                     </div>
                 </div>
                 <h3 class="mt-3 text-lg font-semibold leading-6 text-white hover:underline">
-                    <a href="#">
+                    <a href="{{ route('post', ['id' => $post->id]) }}">
                         <span class="absolute inset-0"></span>
                         <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vel quidem commodi! -->
                         {{ $post->description }}

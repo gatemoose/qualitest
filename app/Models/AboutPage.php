@@ -10,6 +10,7 @@ class AboutPage extends Model
     use HasFactory;
     
     protected $table = 'about_page';
+    
     protected $fillable = [
         'mission',
         'values',

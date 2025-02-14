@@ -46,7 +46,7 @@
             </div>
             <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
                 <div class="inline-flex rounded-sm shadow">
-                    <x-button link='/login' content='Entrar' />
+                    <x-button link='{{ route("docscliente") }}' content='Entrar' />
                 </div>
             </div>
         </nav>
@@ -74,7 +74,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/login" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline" wire:navigate>
+                    <a href="{{ route('docscliente') }}" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline" wire:navigate>
                         Login
                     </a>
                 </li>

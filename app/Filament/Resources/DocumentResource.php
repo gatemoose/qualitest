@@ -39,7 +39,7 @@ class DocumentResource extends Resource
                 Forms\Components\DatePicker::make('expiration_date')
                     ->required(),
                 Forms\Components\Select::make('client_id')
-                    ->relationship('clients', 'username')
+                    ->relationship('clients', 'name')
                     // ->searchable()
                     ->required(),
             ]);
@@ -51,13 +51,13 @@ class DocumentResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('url')
-                    ->limit(20)
-                    ->searchable(),
+                // Tables\Columns\TextColumn::make('url')
+                //     ->limit(20)
+                //     ->searchable(),
                 Tables\Columns\TextColumn::make('expiration_date')
                     ->dateTime('d/m/y')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('clients.username') // Mostra o nome ao invés do ID.
+                Tables\Columns\TextColumn::make('clients.name') // Mostra o nome ao invés do ID.
                     ->sortable(), 
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
