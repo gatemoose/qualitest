@@ -24,17 +24,17 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('sobre') }}" class="text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white" wire:navigate>
+                    <a href="{{ route('about') }}" class="text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white" wire:navigate>
                         Sobre
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('servicos') }}" class="text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white" wire:navigate>
+                    <a href="{{ route('services') }}" class="text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white" wire:navigate>
                         Serviços
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('contato') }}" class="text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white" wire:navigate>
+                    <a href="{{ route('contact') }}" class="text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 dark:hover:text-white" wire:navigate>
                         Contato
                     </a>
                 </li>
@@ -49,7 +49,7 @@
                     @if (auth()->guard('clients')->check())
                     <x-dropdown-button></x-dropdown-button>
                     @else
-                    <x-button link='{{ route("docscliente") }}' content='Entrar' />
+                    <x-button link='{{ route("docs") }}' content='Entrar' />
                     @endif
                 </div>
             </div>
@@ -58,17 +58,17 @@
         <div id="mobile-menu" class="hidden flex-col md:hidden transform transition-transform scale-95 opacity-0 duration-300 ease-in-out">
             <ul class="space-y-2 text-end">
                 <li>
-                    <a href="{{ route('sobre') }}" class="block text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white" wire:navigate>
+                    <a href="{{ route('about') }}" class="block text-lg font-normal hover:underline text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white" wire:navigate>
                         Sobre
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('servicos') }}" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline" wire:navigate>
+                    <a href="{{ route('services') }}" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline" wire:navigate>
                         Serviços
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('contato') }}" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline" wire:navigate>
+                    <a href="{{ route('contact') }}" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline" wire:navigate>
                         Contato
                     </a>
                 </li>
@@ -81,11 +81,11 @@
                 @if (auth()->guard('clients')->check())
 
                 <li>
-                    <a href="{{ route('docscliente') }}" class='block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline' wire:navigate>Meus Documentos</a>
+                    <a href="{{ route('docs') }}" class='block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline' wire:navigate>Meus Documentos</a>
                 </li>
                 @else
                 <li>
-                    <a href="{{ route('docscliente') }}" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline" wire:navigate>
+                    <a href="{{ route('docs') }}" class="block text-lg font-normal text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:underline" wire:navigate>
                         Entrar
                     </a>
                 </li>

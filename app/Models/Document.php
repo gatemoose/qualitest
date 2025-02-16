@@ -20,6 +20,10 @@ class Document extends Model
         'client_id',
     ];
 
+    protected $casts = [
+        'expiration_date' => 'date',
+    ];
+
     public function clients(): BelongsTo
     {
         return $this->belongsTo(Client::class, 'client_id');

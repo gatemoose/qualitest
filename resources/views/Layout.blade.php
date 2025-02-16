@@ -28,6 +28,5 @@
     @include ('NavbarScript')
 
     @livewireScripts
-
 </body>
 </html>

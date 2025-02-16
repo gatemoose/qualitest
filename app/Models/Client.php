@@ -10,8 +10,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Client extends Authenticatable
 {
-    use HasFactory;
-
     protected $table = 'clients';
     
     protected $fillable = [

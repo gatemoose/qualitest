@@ -5,7 +5,7 @@
 <!-- SESSÃO 1. -->
 <div class="flex flex-wrap items-center mt-12 px-4 sm:px-8 md:px-10 lg:px-12">
     <div class="w-full md:w-3/5 lg:w-1/2 px-4">
-        <img src="img/sondagem.jpg" alt="Membros da Equipe Qualitest em trabalho." class="inline-block rounded shadow-lg w-full">
+        <img src="{{ asset('img/sondagem.jpg') }}" alt="Membros da Equipe Qualitest em trabalho." class="inline-block rounded shadow-lg w-full">
     </div>
     <div class="w-full md:w-2/5 lg:w-1/2 px-4 dark:text-neutral-50 lg:pl-12">
         <h3 class="font-bold mt-8 text-xl md:mt-0 sm:text-2xl">
@@ -99,7 +99,7 @@
             </div>
 
             <div class="relative">
-                <img class="relative rounded w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110" src="img/edilene.jpg" alt="Edilene Patrícia da Silva Oliveira" />
+                <img class="relative rounded w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110" src="{{ asset('img/edilene.jpg') }}" alt="Edilene Patrícia da Silva Oliveira" />
             </div>
         </div>
 

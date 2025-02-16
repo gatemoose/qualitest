@@ -6,7 +6,7 @@
 <div class="flex items-center justify-center dark:bg-slate-900 px-4 sm:px-6 lg:px-8">
     <div class="relative py-3 sm:max-w-xs sm:mx-auto">
         <div class="min-h-96 px-8 py-6 text-left bg-white dark:bg-slate-900 rounded-xl shadow-lg">
-            <form method='post' action="{{ route('logincliente') }}">
+            <form method='post' action="{{ route('login') }}">
                 @csrf
                 <div class="flex flex-col justify-center items-center h-full">
                     <div class="flex flex-col items-center justify-center gap-2 mb-8">
@@ -17,10 +17,13 @@
                         <span class="m-0 text-sm max-w-[90%] text-center text-slate-500">
                             E tenha acesso a documentos dos seus processos.
                         </span>
+                        @foreach($errors->all() as $error)
+                            <p class="text-red-500 text-center text-sm">{{ $error }}</p>
+                        @endforeach
                     </div>
                     <div class="w-full flex flex-col gap-2">
-                        <label class="font-semibold text-xs text-slate-400">Identificador</label>
-                        <input name='email' class="border rounded-lg px-3 py-2 mb-5 text-sm w-full outline-none dark:border-gray-500 dark:bg-slate-900 dark:text-gray-300" placeholder="nome@empresa" />
+                        <label class="font-semibold text-xs text-slate-400">Email</label>
+                        <input name='email' class="border rounded-lg px-3 py-2 mb-5 text-sm w-full outline-none dark:border-gray-500 dark:bg-slate-900 dark:text-gray-300" placeholder="nome@empresa.com" value='{{ old("email") }}' />
                     </div>
                 </div>
                 <div class="w-full flex flex-col gap-2">

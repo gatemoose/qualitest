@@ -15,14 +15,14 @@
             </p>
             <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
                 <div class="flex justify-start gap-4">
-                    <x-button link='/sobre' content='Saiba mais' px='5' py='3' />
-                    <x-button link='/contato' content='Entrar em contato' px='5' py='3' />
+                    <x-button link='{{ route("about") }}' content='Saiba mais' px='5' py='3' />
+                    <x-button link='{{ route("contact") }}' content='Entrar em contato' px='5' py='3' />
                 </div>
                 <div>
                     <h3 class="font-normal text-gray-600 md:text-lg lg:text-xl dark:text-gray-300">
                         Já é cliente?
                     </h3>
-                    <a href='{{ route("docscliente") }}' wire:navigate>
+                    <a href='{{ route("docs") }}' wire:navigate>
                         <h3 class="hover:underline dark:hover:text-white text-gray-500 md:text-lg lg:text-xl dark:text-gray-300">
                             Faça login clicando aqui!
                         </h3>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="hidden lg:mt-0 lg:col-span-5 lg:flex w-auto h-auto">
-            <img src="img/quem-somos.jpg" alt="Capa" class='rounded-md w-full h-auto'>
+            <img src="{{ asset('img/quem-somos.jpg') }}" alt="Capa" class='rounded-md w-full h-auto'>
         </div>
     </div>
 </section>
@@ -41,7 +41,7 @@
 <div class="mx-auto p-6 dark:bg-slate-900">
     <div class="flex flex-wrap items-center mt-6 text-left">
         <div class="w-full md:w-3/5 lg:w-1/2">
-            <img src="img/ensaio-1.jpg" alt="Imagem" class="md:size-3/4 lg:size-full inline-block rounded shadow-lg">
+            <img src="{{ asset('img/ensaio-1.jpg') }}" alt="Imagem" class="md:size-3/4 lg:size-full inline-block rounded shadow-lg">
         </div>
         <div class="w-full md:w-2/5 lg:w-1/2 dark:text-neutral-50 md:text-left lg:pl-12">
             <h3 class="font-bold mt-8 text-xl md:mt-0 sm:text-2xl">
@@ -56,7 +56,7 @@
 
     <div class="flex flex-wrap items-center mt-10">
         <div class="w-full md:w-3/5 lg:w-1/2">
-            <img src="img/carac.jpg" alt="Imagem" class="md:size-3/4 lg:size-full inline-block rounded shadow-lg">
+            <img src="{{ asset('img/carac.jpg') }}" alt="Imagem" class="md:size-3/4 lg:size-full inline-block rounded shadow-lg">
         </div>
         <div class="w-full md:w-2/5 lg:w-1/2 md:order-first dark:text-white md:text-left lg:pr-12">
             <h3 class="font-bold mt-8 text-xl md:mt-0 sm:text-2xl">

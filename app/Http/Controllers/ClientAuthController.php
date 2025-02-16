@@ -20,15 +20,15 @@ class ClientAuthController extends Controller
         ]);
 
         if (Auth::guard('clients')->attempt($credentials)) {
-            return redirect()->route('docscliente');
+            return redirect()->route('docs');
         }
 
-        return back()->withErrors(['email' => 'Invalid credentials']);
+        return back()->withErrors(['email' => 'Credenciais inválidas.']);
     }
 
     public function logout()
     {
         Auth::guard('clients')->logout();
-        return redirect()->route('logincliente');
+        return redirect()->route('login');
     }
 }

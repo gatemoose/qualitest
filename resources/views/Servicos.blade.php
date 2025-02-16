@@ -54,12 +54,12 @@
           </dl>
         </div>
         <div class="mt-10 flex flex-row items-start justify-start gap-y-4 gap-x-6">
-            <x-button link='/contato' content='Entre em contato' px='4' py='3' class="flex-1" />
-            <x-button link='/sobre' content='Saiba mais' px='5' py='3' class="flex-1" />
+            <x-button link='{{ route("contact") }}' content='Entre em contato' px='4' py='3' class="flex-1" />
+            <x-button link='{{ route("about") }}' content='Saiba mais' px='5' py='3' class="flex-1" />
         </div>
 
       </div>
-      <img src="img/ensaio-1.jpg" alt="Imagem da Qualitest Engenharia." class="hidden sm:block w-full max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10" width="2432" height="1442">
+      <img src="{{ asset('img/ensaio-1.jpg') }}" alt="Imagem da Qualitest Engenharia." class="hidden sm:block w-full max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10" width="2432" height="1442">
     </div>
   </div>
 </section>
