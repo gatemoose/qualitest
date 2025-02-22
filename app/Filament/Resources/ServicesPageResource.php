@@ -29,6 +29,8 @@ class ServicesPageResource extends Resource
             ->columns(1)
             ->schema([
                 Forms\Components\TextInput::make('blue_phrase')
+                    ->label('Frase Azul')
+                    ->placeholder('Esta frase é mostrada antes dos textos, acima do título.')
                     ->required(),
                 Forms\Components\RichEditor::make('text1')
                     ->toolbarButtons([
@@ -38,8 +40,7 @@ class ServicesPageResource extends Resource
                         'underline',
                         'redo',
                         'undo'
-                    ])
-                    ->required(),
+                    ])->required()->label('Texto 1'),
                 Forms\Components\RichEditor::make('text2')
                     ->toolbarButtons([
                         'bold',
@@ -48,8 +49,7 @@ class ServicesPageResource extends Resource
                         'underline',
                         'redo',
                         'undo'
-                    ])
-                    ->required(),
+                    ])->required()->label('Texto 2'),
                 Forms\Components\RichEditor::make('text3')
                     ->toolbarButtons([
                         'bold',
@@ -58,8 +58,7 @@ class ServicesPageResource extends Resource
                         'underline',
                         'redo',
                         'undo'
-                    ])
-                    ->required(),
+                    ])->required()->label('Texto 3'),
             ]);
     }
 
@@ -69,21 +68,24 @@ class ServicesPageResource extends Resource
             ->paginated(false)
             ->columns([
                 Tables\Columns\TextColumn::make('blue_phrase')
-                    ->html(),
-                // Tables\Columns\TextColumn::make('text1')
-                //     ->searchable(),
-                // Tables\Columns\TextColumn::make('text2')
-                //     ->searchable(),
-                // Tables\Columns\TextColumn::make('text3')
-                //     ->searchable(),
-                // Tables\Columns\TextColumn::make('created_at')
-                //     ->dateTime()
-                //     ->sortable()
-                //     ->toggleable(isToggledHiddenByDefault: true),
-                // Tables\Columns\TextColumn::make('updated_at')
-                //     ->dateTime()
-                //     ->sortable()
-                //     ->toggleable(isToggledHiddenByDefault: true),
+                    ->words(5)
+                    ->label('Frase Azul')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('text1')
+                    ->searchable()
+                    ->label('Texto 1')
+                    ->words(10)
+                    ->toggleable(isToggledHiddenByDefault: false),
+                Tables\Columns\TextColumn::make('text2')
+                    ->searchable()
+                    ->label('Texto 2')
+                    ->words(10)
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('text3')
+                    ->searchable()
+                    ->label('Texto 1')
+                    ->words(10)
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //

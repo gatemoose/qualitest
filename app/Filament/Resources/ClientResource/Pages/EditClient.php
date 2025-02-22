@@ -17,7 +17,7 @@ class EditClient extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
-            Actions\Action::make('reset_password', 'Nova Senha') // Fazer 1 botão que altera a senha.
+            Actions\Action::make('Redefinir Senha')
             ->icon('heroicon-o-key')
             ->requiresConfirmation()
             ->color('primary')
@@ -33,20 +33,10 @@ class EditClient extends EditRecord
                     ->title('Senha redefinida com sucesso.')
                     ->success()
                     ->send();
-
-                // dd([
-                //     'NEW PASSWORD' => $newPassword,
-                //     'NEW PASSWORD (HASHED)' => $client->password,
-                // ]);
-
+                    
                 Mail::to($client->email)->send(new SendPassword($newPassword));
-
-                
             }),
-
             Actions\DeleteAction::make()->icon('heroicon-o-trash'),
         ];
-
-        // $password = Str::password(8);
     }
 }

@@ -36,7 +36,7 @@ class HomePageResource extends Resource
                         'underline',
                         'redo',
                         'undo'
-                    ])->required(),
+                    ])->required()->label('Descrição Inicial'),
                 Forms\Components\RichEditor::make('why_qualitest')
                     ->toolbarButtons([
                         'bold',
@@ -45,7 +45,7 @@ class HomePageResource extends Resource
                         'underline',
                         'redo',
                         'undo'
-                    ])->required(),
+                    ])->required()->label('Por que a Qualitest?'),
                 Forms\Components\RichEditor::make('our_values')
                     ->toolbarButtons([
                         'bold',
@@ -54,7 +54,7 @@ class HomePageResource extends Resource
                         'underline',
                         'redo',
                         'undo'
-                    ])->required(),
+                    ])->required()->label('Nossos Valores'),
             ]);
     }
 
@@ -64,21 +64,16 @@ class HomePageResource extends Resource
             ->paginated(false)
             ->columns([
                 Tables\Columns\TextColumn::make('initial_description')
-                    ->words(10)->html()
-            //     Tables\Columns\TextColumn::make('why_qualitest')
-            //         ->limit(15)
-            //         ->searchable(),
-            //     Tables\Columns\TextColumn::make('our_values')
-            //         ->limit(15)
-            //         ->searchable(),
-            //     Tables\Columns\TextColumn::make('created_at')
-            //         ->dateTime()
-            //         ->sortable()
-            //         ->toggleable(isToggledHiddenByDefault: true),
-            //     Tables\Columns\TextColumn::make('updated_at')
-            //         ->dateTime()
-            //         ->sortable()
-            //         ->toggleable(isToggledHiddenByDefault: true),
+                    ->words(10)->html()->label('Descrição Inicial'),
+                Tables\Columns\TextColumn::make('why_qualitest')
+                    ->words(10)
+                    ->searchable()
+                    ->label('Por que nós?'),
+                Tables\Columns\TextColumn::make('our_values')
+                    ->words(10)
+                    ->searchable()
+                    ->label('Nossos Valores')
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //

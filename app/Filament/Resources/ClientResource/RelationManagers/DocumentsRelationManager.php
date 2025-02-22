@@ -50,9 +50,9 @@ class DocumentsRelationManager extends RelationManager
             ->recordTitleAttribute('title')
             ->columns([
                 Tables\Columns\TextColumn::make('title')->label('Título'),
-                Tables\Columns\TextColumn::make('url')->label('Documento')
-                ->url(fn (Document $url): string => asset('storage/' . $url->url))
-                ->openUrlInNewTab(),
+                // Tables\Columns\TextColumn::make('url')->label('Documento')
+                // ->url(fn (Document $url): string => asset('storage/' . $url->url))
+                // ->openUrlInNewTab(),
                 Tables\Columns\TextColumn::make('expiration_date')
                     ->label('Data de Expiração')
                     ->dateTime('d/m/Y'),

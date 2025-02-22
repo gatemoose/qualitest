@@ -29,7 +29,8 @@ class ContactPageResource extends Resource
             ->columns(1)
             ->schema([
                 Forms\Components\TextInput::make('address')
-                    ->required(),
+                    ->required()
+                    ->label('Endereço'),
                 Forms\Components\RichEditor::make('phone')
                     ->toolbarButtons([
                         'bold',
@@ -38,10 +39,11 @@ class ContactPageResource extends Resource
                         'underline',
                         'redo',
                         'undo'
-                    ])->required(),
+                    ])->required()->label('Número de Telefone'),
                 Forms\Components\TextInput::make('email')
                     ->email()
-                    ->required(),
+                    ->required()
+                    ->label('Emails para Contato'),
                 Forms\Components\TextInput::make('google_maps_embedding')
                     ->label('Link do Embedding do Google Maps')
                     ->placeholder('Obs.: Adicionar somente o conteúdo dentro de src do iframe.')
@@ -55,7 +57,7 @@ class ContactPageResource extends Resource
                         'link',
                         'redo',
                         'undo'
-                    ])->required(),
+                    ])->required()->label('Redes Sociais'),
             ]);
     }
 
@@ -64,27 +66,23 @@ class ContactPageResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('address')
-                    ->limit(10)
+                    ->words(5)
+                    ->label('Endereço')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('phone')
-                    ->limit(10)
+                    ->words(10)
+                    ->label('Telefone')
+                    ->html()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email')
-                    ->limit(10)
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('google_maps_embedding')
-                    ->limit(10)
+                    ->words(10)
+                    ->label('Email')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('social_media')
-                    ->limit(10)
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
+                    ->words(10)
+                    ->html()
+                    ->label('Redes Sociais')
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([

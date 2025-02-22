@@ -29,15 +29,15 @@ class UserResource extends Resource
             ->columns(1)
             ->schema([
                 Forms\Components\TextInput::make('name')
+                    ->label('Nome')
                     ->required(),
                 Forms\Components\TextInput::make('email')
                     ->email()
+                    ->placeholder('Adicione um email válido.')
                     ->required(),
-                Forms\Components\DateTimePicker::make('email_verified_at')
-                    ->nullable()
-                    ->hidden(),
                 Forms\Components\TextInput::make('password')
                     ->password()
+                    ->label('Senha')
                     ->required(),
             ]);
     }
@@ -47,20 +47,19 @@ class UserResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->label('Nome')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('email_verified_at')
-                    ->dateTime()
-                    ->toggleable(isToggledHiddenByDefault: true)
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
+                    ->label('Data de Criação')
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
+                    ->label('Última Atualização')
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([

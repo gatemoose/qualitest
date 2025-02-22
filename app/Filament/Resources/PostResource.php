@@ -29,19 +29,25 @@ class PostResource extends Resource
             ->columns(1)
             ->schema([
                 Forms\Components\TextInput::make('title')
-                    ->required(),
+                    ->required()
+                    ->label('Título'),
                 Forms\Components\Textarea::make('description')->rows(3)
-                    ->required(),
+                    ->required()
+                    ->label('Descrição'),
                 Forms\Components\RichEditor::make('content')
                     ->fileAttachmentsDisk('public')
-                    ->required(),
+                    ->required()
+                    ->label('Conteúdo da Postagem'),
                 Forms\Components\FileUpload::make('image')
                     ->image()
-                    ->required(),
+                    ->required()
+                    ->label('Imagem'),
                 Forms\Components\TextInput::make('tag')
+                    ->placeholder('Tag é uma palavra que descreve o assunto da postagem.')
                     ->required(),
                 Forms\Components\TextInput::make('city')
-                    ->required(),
+                    ->required()
+                    ->label('Cidade'),
             ]);
     }
 
@@ -50,22 +56,32 @@ class PostResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('description')->limit(10)
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('content')->limit(20)
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Título'),
+                Tables\Columns\TextColumn::make('description')->words(5)
+                    ->searchable()
+                    ->label('Descrição'),
+                Tables\Columns\TextColumn::make('content')->words(5)
+                    ->searchable()
+                    ->html()
+                    ->label('Conteúdo'),
                 Tables\Columns\ImageColumn::make('image')->circular(),
                 Tables\Columns\TextColumn::make('tag')
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('city')
+                    ->label('Cidade')
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
+                    ->label('Data de Criação')
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
+                    ->label('Última Atualização')
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])

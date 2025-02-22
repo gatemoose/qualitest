@@ -2,14 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\HomePage;
-use App\Models\AboutPage;
-use App\Models\ContactPage;
-use App\Models\ServicesList;
-use App\Models\ServicesPage;
 use Illuminate\Database\Seeder;
+use App\Models\{
+    User, Post,
+    HomePage, AboutPage, ContactPage,
+    ServicesList, ServicesPage
+};
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,10 +19,18 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+        // User::create([
+        //     'name' => 'root',
+        //     'email' => 'root@root.com',
+        //     'password' => 'root',
+        // ]);
+
+        Post::factory(10)->create();
+
         // AboutPage::factory(1)->create();
         // ContactPage::factory(1)->create();
         // HomePage::factory(1)->create();
         // ServicesPage::factory(1)->create();
-        ServicesList::factory(10)->create();
+        // ServicesList::factory(6)->create();
     }
 }

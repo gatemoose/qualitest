@@ -9,11 +9,9 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Builder;
-// use RelationManagers\DocumentsRelationManager;
 use App\Filament\Resources\ClientResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ClientResource\RelationManagers;
-// use App\Filament\Resources\ClientResource\RelationManagers;
 
 class ClientResource extends Resource
 {
@@ -24,23 +22,24 @@ class ClientResource extends Resource
     protected static ?string $modelLabel = 'Cliente';
     protected static ?string $pluralModelLabel = 'Clientes';
 
-    protected static ?string $navigationGroup = 'Cliente';
+    protected static ?string $navigationGroup = 'Administrativo';
 
     public static function form(Form $form): Form
     {
         return $form
+            ->columns(1)
             ->schema([
                 Forms\Components\TextInput::make('name')
-                    ->required(),
+                    ->required()
+                    ->label('Nome'),
                 Forms\Components\TextInput::make('email')
                     ->email()
-                    ->required(),
-                Forms\Components\TextInput::make('password')
-                    ->placeholder('A senha será gerada automaticamente.')
-                    ->readonly(),
+                    ->required()
+                    ->label('Email'),
                 Forms\Components\TextInput::make('cnpj')
                     ->maxLength(14)
-                    ->required(),
+                    ->required()
+                    ->label('CNPJ'),
             ]);
     }
 
@@ -49,18 +48,23 @@ class ClientResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Nome'),
                 Tables\Columns\TextColumn::make('email')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Email'),
                 Tables\Columns\TextColumn::make('cnpj')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('CNPJ'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
+                    ->label('Data de Criação')
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
+                    ->label('Última Atualização')
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([

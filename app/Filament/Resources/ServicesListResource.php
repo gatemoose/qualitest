@@ -29,7 +29,8 @@ class ServicesListResource extends Resource
             ->columns(1)
             ->schema([
                 Forms\Components\TextInput::make('title')
-                    ->required(),
+                    ->required()
+                    ->label('Título'),
                 Forms\Components\RichEditor::make('description')
                     ->toolbarButtons([
                         'bulletList',
@@ -39,8 +40,7 @@ class ServicesListResource extends Resource
                         'underline',
                         'redo',
                         'undo'
-                    ])
-                    ->required(),
+                    ])->required()->label('Descrição')->placeholder('Adicione uma lista.'),
             ]);
     }
 
@@ -49,18 +49,22 @@ class ServicesListResource extends Resource
         return $table
             ->paginated(false)
             ->columns([
-                Tables\Columns\TextColumn::make('title'),
-                // Tables\Columns\TextColumn::make('description')
-                //     ->limit(10)
-                //     ->searchable(),
-                // Tables\Columns\TextColumn::make('created_at')
-                //     ->dateTime()
-                //     ->sortable()
-                //     ->toggleable(isToggledHiddenByDefault: true),
-                // Tables\Columns\TextColumn::make('updated_at')
-                //     ->dateTime()
-                //     ->sortable()
-                //     ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('title')->label('Título'),
+                Tables\Columns\TextColumn::make('description')
+                    ->words(10)
+                    ->html()
+                    ->label('Descrição')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->label('Data de Criação')
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('updated_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->label('Data de Atualização')
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //

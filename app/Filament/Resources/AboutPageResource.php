@@ -36,7 +36,7 @@ class AboutPageResource extends Resource
                         'underline',
                         'redo',
                         'undo'
-                    ])->required(),
+                    ])->required()->label('Missão'),
                 Forms\Components\RichEditor::make('values')
                     ->toolbarButtons([
                         'bold',
@@ -45,7 +45,7 @@ class AboutPageResource extends Resource
                         'underline',
                         'redo',
                         'undo'
-                    ])->required(),
+                    ])->required()->label('Valores'),
                 Forms\Components\RichEditor::make('vision')
                     ->toolbarButtons([
                         'bold',
@@ -54,7 +54,7 @@ class AboutPageResource extends Resource
                         'underline',
                         'redo',
                         'undo'
-                    ])->required(),
+                    ])->required()->label('Visão'),
                 Forms\Components\RichEditor::make('patricia')
                     ->toolbarButtons([
                         'bold',
@@ -63,7 +63,7 @@ class AboutPageResource extends Resource
                         'underline',
                         'redo',
                         'undo'
-                    ])->required(),
+                    ])->required()->label('Sobre Patrícia'),
                 Forms\Components\RichEditor::make('additional_qualifications')
                     ->toolbarButtons([
                         'bold',
@@ -73,7 +73,7 @@ class AboutPageResource extends Resource
                         'bulletList',
                         'redo',
                         'undo'
-                    ])->required(),
+                    ])->required()->label('Qualificação Complementar'),
                 Forms\Components\RichEditor::make('professional_experience')
                     ->toolbarButtons([
                         'bold',
@@ -83,8 +83,7 @@ class AboutPageResource extends Resource
                         'bulletList',
                         'redo',
                         'undo'
-                    ])
-                    ->required(),
+                    ])->required()->label('Experiência Profissional'),
                 Forms\Components\RichEditor::make('history')
                     ->toolbarButtons([
                         'bold',
@@ -93,8 +92,7 @@ class AboutPageResource extends Resource
                         'underline',
                         'redo',
                         'undo'
-                    ])
-                    ->required(),
+                    ])->required()->label('História'),
             ]);
     }
 
@@ -103,21 +101,15 @@ class AboutPageResource extends Resource
         return $table
             ->paginated(false)
             ->columns([
-                Tables\Columns\TextColumn::make('mission')->words(10)
-                    ->html(),
+                Tables\Columns\TextColumn::make('patricia')->words(10)->html()->label('Sobre Patrícia'),
+                Tables\Columns\TextColumn::make('professional_experience')->words(10)->html()->label('Experiência Profissional'),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                // Tables\Actions\DeleteAction::make(),
             ]);
-            // ->bulkActions([
-            //     Tables\Actions\BulkActionGroup::make([
-            //         // Tables\Actions\DeleteBulkAction::make(),
-            //     ]),
-            // ]);
     }
 
     public static function getPages(): array
@@ -129,6 +121,6 @@ class AboutPageResource extends Resource
 
     public static function canCreate(): bool
     {
-        return false; // Disable the "Create" button
+        return false; // Remove o botão de criar.
     }
 }
