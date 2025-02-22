@@ -2,7 +2,6 @@
 
 @section('content')
 
-{-- SESSÃO 1 --}
 <section class="bg-white dark:bg-slate-900">
     <div class="grid px-6 pt-12 pb-8 mx-auto gap-6 lg:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-20">
         <div class="mr-auto place-self-center lg:col-span-7">
@@ -35,7 +34,6 @@
     </div>
 </section>
 
-{-- SESSÃO 2 --}
 <div class="mx-auto p-6 dark:bg-slate-900">
     <div class="flex flex-wrap items-center mt-6 text-left">
         <div class="w-full md:w-3/5 lg:w-1/2">
@@ -66,8 +64,6 @@
     </div>
 </div>
 
-
-{-- SESSÃO 3 --}
 <div class="w-full dark:bg-slate-900">
     <div class="mx-auto max-w-7xl px-8 lg:px-12 pt-8">
         <div class="mx-auto max-w-2xl text-center">

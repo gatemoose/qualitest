@@ -28,7 +28,6 @@
 
 </script>
 
-{-- DROPDOWN BUTTON COMPONENT --}
 <script>
     document.getElementById('options-menu').addEventListener('click', function() {
         const dropdown = document.getElementById('dropdown-menu');

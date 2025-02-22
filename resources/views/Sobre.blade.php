@@ -2,7 +2,6 @@
 
 @section('content')
 
-{-- SESSÃO 1 --}
 <div class="flex flex-wrap items-center mt-12 px-4 sm:px-8 md:px-10 lg:px-12">
     <div class="w-full md:w-3/5 lg:w-1/2 px-4">
         <img src="{{ asset('img/sondagem.jpg') }}" alt="Membros da Equipe Qualitest em trabalho." class="inline-block rounded shadow-lg w-full">
@@ -17,7 +16,6 @@
     </div>
 </div>
 
-{-- SESSÃO 2 --}
 <section class="dark:bg-slate-900 pt-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mt-8 grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-3">
@@ -78,7 +76,6 @@
     </div>
 </section>
 
-{-- SESSÃO 3 --}
 <section class="pt-10 pb-10 overflow-hidden dark:bg-slate-900 sm:pt-16 2xl:pt-16">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="grid items-center grid-cols-1 md:grid-cols-2 px-4">

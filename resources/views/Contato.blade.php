@@ -2,7 +2,6 @@
 
 @section('content')
 
-{-- SESSÃO 1 --}
 <div class="max-w-6xl max-lg:max-w-3xl mx-auto p-4">
       <div class="bg-white rounded p-8 dark:bg-slate-900">
         <h2 class="text-3xl text-gray-800 font-extrabold mb-12 dark:text-gray-100">
@@ -93,7 +92,6 @@
       </div>
 </div>
 
-{-- MAPA --}
 <div class='text-3xl font-extrabold text-center md:hidden dark:text-white p-3'>
     Onde nos encontrar
 </div>

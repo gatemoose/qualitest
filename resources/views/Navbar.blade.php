@@ -89,9 +89,7 @@
                         Entrar
                     </a>
                 </li>
-                @endif
-
-               
+                @endif   
             </ul>
         </div>
     </div>

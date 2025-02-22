@@ -2,7 +2,6 @@
 
 @section('content')
 
-{-- SESSÃO 1 --}
 <section class="overflow-hidden dark:bg-slate-900 py-8 sm:py-16">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -48,15 +47,12 @@
             <x-button link='{{ route("contact") }}' content='Entre em contato' px='4' py='3' class="flex-1" />
             <x-button link='{{ route("about") }}' content='Saiba mais' px='5' py='3' class="flex-1" />
         </div>
-
       </div>
       <img src="{{ asset('img/ensaio-1.jpg') }}" alt="Imagem da Qualitest Engenharia." class="hidden sm:block w-full max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10" width="2432" height="1442">
     </div>
   </div>
 </section>
 
-
-{-- SESSÃO 2 --}
 <div class="py-24 px-8 max-w-5xl mx-auto flex flex-col md:flex-row gap-12">
     <div class="flex flex-col text-left basis-1/2 dark:text-gray-200">
         <p class="inline-block font-semibold text-blue-500 mb-4">Saiba mais sobre</p>
@@ -84,7 +80,6 @@
             </li>
         @endforeach
         </ul>
-
         </div>
 
         <ul class="basis-1/2 dark:text-gray-200">
@@ -114,8 +109,6 @@
         </ul>
 </div>
 
-
-{-- DROPDOWN SCRIPT --}
 <script>
     function toggleFAQ(button) {
         const content = button.nextElementSibling;
