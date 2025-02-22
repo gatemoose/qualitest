@@ -27,10 +27,13 @@ final class ServicesPageFactory extends Factory
     public function definition(): array
     {
         return [
-            'blue_phrase' => fake()->word,
-            'text1' => fake()->word,
-            'text2' => fake()->word,
-            'text3' => fake()->word,
+            'blue_phrase' => 'Nos encaixamos em qualquer prazo!',
+
+            'text1' => 'Oferecemos um serviço que contempla uma variedade de ensaios, trazendo comodidade e segurança aos nossos clientes.',
+
+            'text2' => 'Parecer técnico é a manifestação especializada sobre determinado assunto, no nosso caso a real situação de uma edificação quando se trata de parecer técnico de obras civis.',
+
+            'text3' => 'Ensaios em concreto fresco endurecido, sejam destrutivos ou não, bem como cimento, argamassa e agregados.',
         ];
     }
 }

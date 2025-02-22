@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- SESSÃO 1. -->
+{-- SESSÃO 1 --}
 <div class="flex items-center justify-center dark:bg-slate-900 px-4 sm:px-6 lg:px-8">
     <div class="relative py-3 sm:max-w-xs sm:mx-auto">
         <div class="min-h-96 px-8 py-6 text-left bg-white dark:bg-slate-900 rounded-xl shadow-lg">

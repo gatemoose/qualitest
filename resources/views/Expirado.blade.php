@@ -2,6 +2,8 @@
 
 @section('content')
 
+<!-- Só é vista se um documento for expirado. -->
+
 <div class="flex items-center justify-center h-screen">
     <div class="bg-white dark:bg-slate-800 p-8 rounded shadow-md text-center transition-transform transform hover:scale-105">
         <h1 class="text-3xl font-bold text-red-500 dark:text-white mb-4">Arquivo Expirado</h1>

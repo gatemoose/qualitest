@@ -20,9 +20,9 @@ class Document extends Model
         'client_id',
     ];
 
-    protected $casts = [
-        'expiration_date' => 'date',
-    ];
+    // protected $casts = [
+    //     'expiration_date' => 'date',
+    // ];
 
     public function clients(): BelongsTo
     {

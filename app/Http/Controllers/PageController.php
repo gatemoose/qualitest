@@ -49,7 +49,7 @@ class PageController extends Controller
 
     public function posts()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('created_at', 'desc')->get();
 
         return view('Posts', compact('posts'));
     }

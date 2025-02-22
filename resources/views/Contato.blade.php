@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- SESSÃO 1. -->
+{-- SESSÃO 1 --}
 <div class="max-w-6xl max-lg:max-w-3xl mx-auto p-4">
       <div class="bg-white rounded p-8 dark:bg-slate-900">
         <h2 class="text-3xl text-gray-800 font-extrabold mb-12 dark:text-gray-100">
@@ -20,7 +20,6 @@
               <x-button link='#' content='Enviar' px='5' py='3' />
               <x-button link='https://wa.me/5584996667342' content='Whatsapp' px='5' py='3' />
             </div>
-
           </form>
 
           <div class="grid sm:grid-cols-2  gap-12">
@@ -36,8 +35,6 @@
                     Faça uma visita
                 </h4>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                    <!-- Rua Vicente Valentim do Vale, N° 281, Centro.
-                    Governador Dix-Sept Rosado. -->
                     {{ $contact->address ?? 'undefined' }}
                 </p>
               </div>
@@ -53,12 +50,6 @@
                 <h4 class="text-gray-800 dark:text-gray-200 text-base font-bold">
                     Entre em contato
                 </h4>
-                <!-- <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                    (84) 9 9666-7342
-                </p>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                    (99) 9 9999-9999
-                </p> -->
                 <div class='text-sm text-gray-600 dark:text-gray-400 mt-1'>
                 {!! $contact->phone ?? 'undefined' !!}
                 </div>
@@ -76,9 +67,6 @@
                 <h4 class="text-gray-800 dark:text-gray-200 text-base font-bold">
                     Envie um email
                 </h4>
-                <!-- <a href="mailto:qualitest@outlook.com.br" class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white" wire:navigate>
-                    qualitest@outlook.com.br
-                </a> -->
                 <div class='text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white'>
                   {!! $contact->email ?? 'undefined' !!}
                 </div>
@@ -97,21 +85,6 @@
                 </h4>
                 <div class='text-sm text-gray-600 dark:text-gray-400 mt-1 hover:text-white'>
                   {!! $contact->social_media ?? 'undefined' !!}
-                  <!-- <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
-                      <a href="https://www.facebook.com/qualitestEngenharia" wire:navigate>
-                        Facebook
-                      </a>
-                  </p>
-                  <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
-                      <a href="https://www.instagram.com/qualitest.eng/" wire:navigate>
-                        Instagram
-                      </a>
-                  </p>
-                  <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 hover:underline dark:hover:text-white">
-                      <a href="https://wa.me/5584996667342" wire:navigate>
-                        Whatsapp
-                      </a>
-                  </p> -->
                 </div>
               </div>
             </div>
@@ -120,7 +93,7 @@
       </div>
 </div>
 
-<!-- MAPA. -->
+{-- MAPA --}
 <div class='text-3xl font-extrabold text-center md:hidden dark:text-white p-3'>
     Onde nos encontrar
 </div>

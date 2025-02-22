@@ -16,8 +16,8 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class ContactPageResource extends Resource
 {
     protected static ?string $model = ContactPage::class;
-    protected static ?string $modelLabel = 'PÁG Contato';
-    protected static ?string $pluralModelLabel = 'PÁGS Contato';
+    protected static ?string $modelLabel = 'Contato';
+    protected static ?string $pluralModelLabel = 'Contato';
 
     protected static ?string $navigationGroup = 'Páginas';
 
@@ -43,6 +43,8 @@ class ContactPageResource extends Resource
                     ->email()
                     ->required(),
                 Forms\Components\TextInput::make('google_maps_embedding')
+                    ->label('Link do Embedding do Google Maps')
+                    ->placeholder('Obs.: Adicionar somente o conteúdo dentro de src do iframe.')
                     ->required(),
                 Forms\Components\RichEditor::make('social_media')
                     ->toolbarButtons([

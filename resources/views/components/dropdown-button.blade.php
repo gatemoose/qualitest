@@ -10,7 +10,7 @@
         </button>
     </div>
 
-    <!-- Dropdown menu -->
+    {-- DROPDOWN MENU --}
 
 
 
@@ -19,7 +19,7 @@
             <a href="{{ route('docs') }}" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" role="menuitem" wire:navigate>Meus Documentos</a>
             <form action="{{ route('clientLogout') }}" method="POST">
                 @csrf
-                <button type="submit" class="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" role="menuitem" wire:navigate>Sair</button>
+                <button type="submit" class="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" role="menuitem">Sair</button>
             </form>
         </div>
     </div>

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- SESSÃO 1. -->
+{-- SESSÃO 1 --}
 <section class="bg-white dark:bg-slate-900">
     <div class="grid px-6 pt-12 pb-8 mx-auto gap-6 lg:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-20">
         <div class="mr-auto place-self-center lg:col-span-7">
@@ -10,7 +10,6 @@
                 Qualitest Engenharia
             </h1>
             <p class="max-w-3xl mb-6 font-normal text-gray-600 dark:text-gray-300 lg:mb-8 md:text-lg lg:text-xl lg:pr-4">
-                <!-- A Qualitest Engenharia é uma empresa líder em sondagens SPT e controle tecnológico de concreto. Especializada em fornecer dados precisos sobre a composição do solo e garantir a qualidade dos materiais de construção, a Qualitest assegura a excelência e a segurança dos projetos civis. Com uma equipe altamente qualificada e tecnologia de ponta, a empresa se destaca pela confiabilidade e precisão em todos os seus serviços. -->
                 {!! strip_tags($home['initial_description'] ?? 'undefined',  ['em', 'del', 'span', 'strong']) !!}
             </p>
             <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
@@ -36,8 +35,7 @@
     </div>
 </section>
 
-
-<!-- SESSÃO 2. -->
+{-- SESSÃO 2 --}
 <div class="mx-auto p-6 dark:bg-slate-900">
     <div class="flex flex-wrap items-center mt-6 text-left">
         <div class="w-full md:w-3/5 lg:w-1/2">
@@ -48,7 +46,6 @@
                 Por que a <span class='text-orange-500'>Qualitest</span>?
             </h3>
             <p class="sm:text-lg mt-6 font-normal text-gray-600 dark:text-gray-300">
-                <!-- Escolher a nossa empresa significa optar por inovação e expertise no controle de qualidade de concreto e ensaios relacionados. Contamos com uma equipe altamente qualificada, cujos anos de experiência no setor de obras civis garantem resultados confiáveis e precisos. Nossa abordagem é focada na excelência e na melhoria contínua, oferecendo soluções que não apenas atendem, mas superam as expectativas dos nossos clientes. Com a gente, você tem a certeza de que seus projetos estarão sempre em boas mãos. -->
                 {!! strip_tags($home['why_qualitest'] ?? 'undefined',  ['em', 'del', 'span', 'strong']) !!}
             </p>
         </div>
@@ -63,7 +60,6 @@
                 Quais são nossos <span class="text-sky-500">valores</span>?
             </h3>
             <p class="sm:text-lg mt-6 font-normal text-gray-600 dark:text-gray-300">
-                <!-- Nossos valores são centrados em atender às necessidades e expectativas dos clientes, garantindo resultados excepcionais e pareceres técnicos precisos. Comprometemo-nos a cumprir prazos acordados e a assegurar a qualidade dos materiais utilizados na construção civil, sempre mantendo a integridade e a transparência em nossos serviços. -->
                 {!! strip_tags($home['our_values'] ?? 'undefined',  ['em', 'del', 'span', 'strong']) !!}
             </p>
         </div>
@@ -71,7 +67,7 @@
 </div>
 
 
-<!-- SESSÃO 3. -->
+{-- SESSÃO 3 --}
 <div class="w-full dark:bg-slate-900">
     <div class="mx-auto max-w-7xl px-8 lg:px-12 pt-8">
         <div class="mx-auto max-w-2xl text-center">
@@ -105,7 +101,6 @@
                 <h3 class="mt-3 text-lg font-semibold leading-6 text-white hover:underline">
                     <a href="{{ route('post', ['id' => $post->id]) }}">
                         <span class="absolute inset-0"></span>
-                        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vel quidem commodi! -->
                         {{ $post->description }}
                     </a>
                 </h3>
@@ -114,54 +109,6 @@
         @empty 
         No posts found.
         @endforelse
-
-            <!-- Second blog post -->
-            <!-- <article class="relative isolate flex flex-col justify-end overflow-hidden rounded bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
-                <img src="img/ensaio-1.jpg" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
-                <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-                <div class="absolute inset-0 -z-10 rounded ring-1 ring-inset ring-gray-900/10"></div>
-                <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-                    <time datetime="2023-10-11" class="mr-8">11/10/23</time>
-                    <div class="-ml-4 flex items-center gap-x-4">
-                        <svg viewBox="0 0 2 2" class="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
-                            <circle cx="1" cy="1" r="1"></circle>
-                        </svg>
-                        <div class="flex gap-x-2.5">
-                            <p>Areia Branca</p>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="mt-3 text-lg font-semibold leading-6 text-white hover:underline">
-                    <a href="#">
-                        <span class="absolute inset-0"></span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, temporibus!
-                    </a>
-                </h3>
-            </article>
-            <!-- Third blog post -->
-            <!-- <article class="relative isolate flex flex-col justify-end overflow-hidden rounded bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
-                <img src="img/ensaio-1.jpg" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
-                <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-                <div class="absolute inset-0 -z-10 rounded ring-1 ring-inset ring-gray-900/10"></div>
-                <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-                    <time datetime="2023-10-11" class="mr-8">11/10/23</time>
-                    <div class="-ml-4 flex items-center gap-x-4">
-                        <svg viewBox="0 0 2 2" class="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
-                            <circle cx="1" cy="1" r="1"></circle>
-                        </svg>
-                        <div class="flex gap-x-2.5">
-                            <p>Natal</p>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="mt-3 text-lg font-semibold leading-6 text-white hover:underline">
-                    <a href="#">
-                        <span class="absolute inset-0"></span>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere consequatur nesciunt asperiores at reprehenderit praesentium.
-                    </a>
-                </h3>
-            </article> -->
-            <!-- More blog posts can be added similarly -->
         </div>
     </div>
 </div>

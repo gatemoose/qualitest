@@ -16,8 +16,8 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class AboutPageResource extends Resource
 {
     protected static ?string $model = AboutPage::class;
-    protected static ?string $modelLabel = 'PÁG Sobre';
-    protected static ?string $pluralModelLabel = 'PÁGS Sobre';
+    protected static ?string $modelLabel = 'Sobre';
+    protected static ?string $pluralModelLabel = 'Sobre';
 
     protected static ?string $navigationGroup = 'Páginas';
 
@@ -105,34 +105,6 @@ class AboutPageResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('mission')->words(10)
                     ->html(),
-                // Tables\Columns\TextColumn::make('values')->words(10)
-                //     ->html()
-                //     ->searchable(),
-                // Tables\Columns\TextColumn::make('vision')->words(10)
-                //     ->html()
-                //     ->searchable(),
-                // Tables\Columns\TextColumn::make('patricia')->words(10)
-                //     ->html()
-                //     ->searchable(),
-                // Tables\Columns\TextColumn::make('additional_qualifications')
-                //     ->html()
-                //     ->words(10)
-                //     ->searchable(),
-                // Tables\Columns\TextColumn::make('professional_experience')
-                //     ->html()
-                //     ->words(10)
-                //     ->searchable(),
-                // Tables\Columns\TextColumn::make('history')->words(10)
-                //     ->html()
-                //     ->searchable(),
-                // Tables\Columns\TextColumn::make('created_at')
-                //     ->dateTime()
-                //     ->sortable()
-                //     ->toggleable(isToggledHiddenByDefault: true),
-                // Tables\Columns\TextColumn::make('updated_at')
-                //     ->dateTime()
-                //     ->sortable()
-                //     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //

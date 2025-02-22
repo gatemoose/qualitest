@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- SESSÃO 1. -->
+{-- SESSÃO 1 --}
 <section class="overflow-hidden dark:bg-slate-900 py-8 sm:py-16">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -24,9 +24,6 @@
                 </svg>
                 {!! $services->text1 ?? 'undefined' !!}
               </dt>
-              <!-- <dd class="inline font-normal dark:text-gray-300">
-                um serviço que contempla uma variedade de ensaios, trazendo comodidade e segurança aos nossos clientes.
-              </dd> -->
             </div>
             <div class="relative pl-9 md:text-lg lg:text-xl">
               <dt class="inline dark:text-gray-100">
@@ -35,9 +32,6 @@
                 </svg>
                 {!! $services->text2 ?? 'undefined' !!}
               </dt>
-              <!-- <dd class="inline font-normal dark:text-gray-300">
-                é a manifestação especializada sobre determinado assunto, no nosso caso a real situação de uma edificação quando se trata de parecer técnico de obras civis.
-              </dd> -->
             </div>
             <div class="relative pl-9 md:text-lg lg:text-xl">
               <dt class="inline dark:text-gray-100">
@@ -47,9 +41,6 @@
                 </svg>
                 {!! $services->text3 ?? 'undefined' !!}
               </dt>
-              <!-- <dd class="inline font-normal dark:text-gray-300">
-                fresco endurecido, sejam destrutivos ou não, bem como cimento, argamassa e agregados. 
-              </dd> -->
             </div>
           </dl>
         </div>
@@ -65,7 +56,7 @@
 </section>
 
 
-<!-- SESSÃO 2. -->
+{-- SESSÃO 2 --}
 <div class="py-24 px-8 max-w-5xl mx-auto flex flex-col md:flex-row gap-12">
     <div class="flex flex-col text-left basis-1/2 dark:text-gray-200">
         <p class="inline-block font-semibold text-blue-500 mb-4">Saiba mais sobre</p>
@@ -99,7 +90,8 @@
         <ul class="basis-1/2 dark:text-gray-200">
 
         @foreach ($services_list_right as $service)
-            <li>
+
+        <li>
             <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
             <span class="flex-1 text-base-content dark:text-gray-200">
                 {{ $service->title ?? 'undefined' }}
@@ -117,214 +109,13 @@
                 </div>
             </div>
         </li>
+
         @endforeach
-
         </ul>
-
-
-        
-        <!-- <ul class="pt-4">
-        <li>
-            <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
-                <span class="flex-1 text-base-content dark:text-gray-200">
-                    Cimento
-                </span>
-                <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
-                </svg>
-            </button>
-            <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
-                <div class="pb-5 leading-tight">
-                    <ul class="space-y-1 leading-tight font-normal text-gray-600 font-normal text-gray-600 dark:text-gray-300  list-disc list-inside">
-                        <li>Determinação de Finura NBR 11579.</li>
-                        <li>Massa especifica do cimento NBR 6474 / NM 23 Tempo de pega NBR NM 65</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li>
-            <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
-                <span class="flex-1 text-base-content dark:text-gray-100">
-                    Agregados
-                </span>
-                <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
-                </svg>
-            </button>
-            <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
-                <div class="pb-5 leading-tight">
-                    <ul class="space-y-1 leading-tight font-normal text-gray-600 font-normal text-gray-600 dark:text-gray-300   list-disc list-inside">
-                        <li>Composição granulométrica NBR NM 248</li>
-                        <li>Massa unitária do agregado solto e compactado NBR NM 45</li>
-                        <li>Massa específica, massa específica aparente e absorção de água NBR NM 52 / 53</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li>
-            <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
-                <span class="flex-1 text-base-content dark:text-gray-100">
-                    Ensaios com solos
-                </span>
-                <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
-                </svg>
-            </button>
-            <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
-                <div class="pb-5 leading-tight">
-                    <ul class="space-y-1 leading-tight font-normal text-gray-600 font-normal text-gray-600 dark:text-gray-300   list-disc list-inside">
-                        <li>Granulometria por peneiramento e sedimentação NBR 7181</li>
-                        <li>Determinação do limite de liquidez (LL) NBR 6456</li>
-                        <li>Determinação do limite de plasticidade (LP) NBR 7180</li>
-                        <li>Determinação da massa específica real dos grãos de solos finos (ρs) NBR 6508</li>
-                        <li>Determinação do teor de umidade dos solos (w) NBR 6457</li>
-                        <li>Determinação da massa específica aparente dos solos (ρNat)</li>
-                        <li>Compactação (Energias Proctor Normal/Intermediário/Modificada) NBR 7182</li>
-                        <li>Índice de Suporte Califórnia – ISC (Energias Proctor Normal/Intermediária/Modificada) NBR 9895</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li>
-            <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
-                <span class="flex-1 text-base-content dark:text-gray-100">
-                    Outros serviços
-                </span>
-                <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
-                </svg>
-            </button>
-            <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
-                <div class="pb-5 leading-tight">
-                    <ul class="space-y-1 leading-tight font-normal text-gray-600 font-normal text-gray-600 dark:text-gray-300   list-disc list-inside">
-                        <li>Ensaio a compressão de blocos cerâmicos NBR 15270</li>
-                        <li>Determinação de medidas das faces – Dimensões efetivas</li>
-                        <li>Determinação das medidas das paredes externas e septos dos blocos</li>
-                        <li>Determinação de desvio em relação ao esquadro</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-    </ul> 
-    </div> -->
-
-
-
-    <!-- <ul class="basis-1/2 dark:text-gray-200">
-        <li>
-            <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
-                <span class="flex-1 text-base-content dark:text-gray-200">
-                    Ensaios em Concreto Fresco
-                </span>
-                <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
-                </svg>
-            </button>
-            <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
-                <div class="pb-5 leading-tight">
-                    <ul class="space-y-1 leading-tight font-normal text-gray-600 dark:text-gray-300  list-disc list-inside">
-                        <li>Moldagem e Cura de corpos de prova NBR 5738.</li>
-                        <li>Ensaio de abatimento de tronco de cone – Slump Test NBR NM 67</li>
-                        <li>Concreto Fresco – Determinação de Massa específica NBR 9833</li>
-                        <li>Dosagem Racional de concreto – Métodos ABCP – IPT</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li>
-            <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
-                <span class="flex-1 text-base-content dark:text-gray-100">
-                    Ensaios em Concreto Endurecido
-                </span>
-                <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
-                </svg>
-            </button>
-            <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
-                <div class="pb-5 leading-tight">
-                    <ul class="space-y-1 leading-tight font-normal text-gray-600 dark:text-gray-300  list-disc list-inside">
-                        <li>Resistência à compressão axial NBR 5739.</li>
-                        <li>Extração, preparo e ensaio em testemunhos de concreto NBR 7680.</li>
-                        <li>Resistência a tração na flexão e resistência por compressão na diametral NBR 7680 / NBR 12916 / NBR 12142.</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li>
-            <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
-                <span class="flex-1 text-base-content dark:text-gray-100">
-                    Ensaios Destrutivos e Não Destrutivos de Concreto
-                </span>
-                <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
-                </svg>
-            </button>
-            <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
-                <div class="pb-5 leading-tight">
-                    <ul class="space-y-1 leading-tight font-normal text-gray-600 dark:text-gray-300  list-disc list-inside">
-                        <li>Extração de testemunhos e ensaios de resistência à compressão NBR 7680 / NBR 5739</li>
-                        <li>Esclerometria – Avaliação de resistência superficial do Concreto NBR 7584</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li>
-            <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
-                <span class="flex-1 text-base-content dark:text-gray-100">
-                    Sondagem SPT
-                </span>
-                <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
-                </svg>
-            </button>
-            <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
-                <div class="pb-5 leading-tight">
-                    <ul class="space-y-1 leading-tight font-normal text-gray-600 dark:text-gray-300  list-disc list-inside">
-                        <li>Solo – Sondagens de simples reconhecimento com SPT – Método de ensaio NBR 6484</li>
-                        <li>Rochas e solos – Terminologia NBR 6502</li>
-                        <li>Solo – Análise granulométrica – Método de ensaio NBR 7181</li>
-                        <li>Programação de sondagens de simples reconhecimento dos solos para fundações de edifícios – Procedimento NBR 8036</li>
-                        <li>Rochas e solos – Simbologia NBR 13441</li>
-                        <li>Identificação e descrição das amostras de solo obtidas em sondagens de simples reconhecimento de solos NBR 7250</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li>
-            <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
-                <span class="flex-1 text-base-content dark:text-gray-100">
-                    Outros serviços
-                </span>
-                <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
-                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
-                </svg>
-            </button>
-            <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
-                <div class="pb-5 leading-tight">
-                    <ul class="space-y-1 leading-tight font-normal text-gray-600 dark:text-gray-300  list-disc list-inside">
-                        <li>Determinação da planeza das faces</li>
-                        <li>Determinação da área bruta e da área líquida</li>
-                        <li>Ensaio de penetração de cloretos em concretos</li>
-                        <li>Ensaio de carbonatação em concretos</li>
-                        <li>Ensaio de pH em concretos</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-    </ul> -->
 </div>
 
 
-<!-- DROPDOWN SCRIPT. -->
+{-- DROPDOWN SCRIPT --}
 <script>
     function toggleFAQ(button) {
         const content = button.nextElementSibling;

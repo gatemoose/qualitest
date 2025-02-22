@@ -3,7 +3,9 @@
 namespace App\Filament\Resources\ClientResource\Pages;
 
 use Filament\Actions;
+use App\Mail\SendPassword;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\EditRecord;
 use App\Filament\Resources\ClientResource;
@@ -27,17 +29,19 @@ class EditClient extends EditRecord
                 $client->password = bcrypt($newPassword);
                 $client->save();
 
-                // Mail::to($user->email)->send(new NewPasswordMail($newPassword));
-
                 Notification::make()
                     ->title('Senha redefinida com sucesso.')
                     ->success()
                     ->send();
 
-                dd([
-                    'NEW PASSWORD' => $newPassword,
-                    'NEW PASSWORD (HASHED)' => $client->password,
-                ]);
+                // dd([
+                //     'NEW PASSWORD' => $newPassword,
+                //     'NEW PASSWORD (HASHED)' => $client->password,
+                // ]);
+
+                Mail::to($client->email)->send(new SendPassword($newPassword));
+
+                
             }),
 
             Actions\DeleteAction::make()->icon('heroicon-o-trash'),

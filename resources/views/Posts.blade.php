@@ -2,7 +2,7 @@
 
 @section ('content')
 
-<!-- POSTS. -->
+{-- POSTS --}
 <section class="grid min-h-screen p-8 place-items-center">
   <div class="container grid grid-cols-1 gap-8 my-auto lg:grid-cols-2">
 

@@ -19,6 +19,10 @@ class DocumentsRelationManager extends RelationManager
 {
     protected static string $relationship = 'documents';
 
+    protected static ?string $modelLabel = 'Documento';
+    // protected static ?string $pluralModelLabel = 'Documentos';
+    protected static ?string $title = 'Documentos';
+
     public function form(Form $form): Form
     {
         return $form
@@ -30,8 +34,6 @@ class DocumentsRelationManager extends RelationManager
                 Forms\Components\FileUpload::make('url')
                     ->label('Arquivo')
                     ->disk('local')
-                    // ->visibility('private')
-                    // ->multiple() // Alterar o $casts do Model para Array.
                     ->directory('documents')
                     // ->preserveFilenames()
                     ->required(),
@@ -39,10 +41,6 @@ class DocumentsRelationManager extends RelationManager
                     ->label('Data de Expiração')
                     ->minDate(now())
                     ->required(),
-                // Forms\Components\Select::make('client_id')
-                //     ->relationship('clients', 'name')
-                //     // ->searchable()
-                //     ->required(),
             ]);
     }
 
@@ -69,7 +67,6 @@ class DocumentsRelationManager extends RelationManager
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
-                // Baixar pdf.
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

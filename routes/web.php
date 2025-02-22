@@ -22,10 +22,6 @@ Route::get('/posts', [PageController::class, 'posts'])->name('posts');
 
 Route::get('/posts/{id}', [PageController::class, 'showPost'])->name('post');
 
-// Route::get('/login', function () {
-//     return view('Login');
-// })->name('login');
-
 Route::prefix('cliente')->group(function () {
     Route::get('/login', [ClientAuthController::class, 'showLoginForm'])->name('showLoginForm');
     Route::post('/login', [ClientAuthController::class, 'login'])->name('login');
@@ -40,41 +36,25 @@ Route::prefix('cliente')->middleware('auth:clients')->group(function () {
         
         $docs = $clients->documents;
 
-        // dd($docs);
-
-        // A data de expiração estava vindo string. Então formatei.
-        // Arquivos sempre vieram expirados após isso.
-        $docs->each(function ($item) {
-            $item->expiration_date = Carbon::parse($item->expiration_date);
-        });
-
-        // dd($docs);
-
         $docs_links = $docs->map(function ($item) {
             $item->link = URL::temporarySignedRoute(
                 'doc',
                 Carbon::parse($item['expiration_date']),
-                // $item['expiration_date'],
                 ['id' => $item->id]
             );
 
             return $item;
         });
 
-        return view('Docs', compact('clients', 'docs'));
+        return view('Docs', compact('clients', 'docs_links')); // docs
     })->name('docs');
 
     Route::get('/documentos/{id}', function (string $id, Request $request) {
-
-        // dd($request);
-
         if (!$request->hasValidSignature()) {
             return view('Expirado');
         }
 
         $doc = Document::with('clients')->whereRelation('clients', 'email', auth()->user()->email)->where('id', $id)->first();
-
-        // dd($doc);
 
         if (Storage::disk('local')->exists($doc->url)) {
             return Storage::disk('local')->download($doc->url);

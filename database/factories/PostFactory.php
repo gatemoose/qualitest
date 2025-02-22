@@ -29,7 +29,7 @@ final class PostFactory extends Factory
         return [
             'title' => fake()->title,
             'description' => fake()->text,
-            'content' => fake()->word,
+            'content' => fake()->text,
             'tag' => fake()->word,
             'city' => fake()->city,
         ];
