@@ -22,6 +22,8 @@ Route::get('/posts', [PageController::class, 'posts'])->name('posts');
 
 Route::get('/posts/{id}', [PageController::class, 'showPost'])->name('post');
 
+Route::get('/msg', [PageController::class, 'sendMessage'])->name('sendMessage');
+
 Route::prefix('cliente')->group(function () {
     Route::get('/login', [ClientAuthController::class, 'showLoginForm'])->name('showLoginForm');
     Route::post('/login', [ClientAuthController::class, 'login'])->name('login');

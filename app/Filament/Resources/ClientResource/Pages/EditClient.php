@@ -34,7 +34,7 @@ class EditClient extends EditRecord
                     ->success()
                     ->send();
                     
-                Mail::to($client->email)->send(new SendPassword($newPassword));
+                Mail::to($client->email)->send(new SendPassword($newPassword, $client->email));
             }),
             Actions\DeleteAction::make()->icon('heroicon-o-trash'),
         ];

@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Client;
 use App\Models\Document;
 use App\Models\HomePage;
+use App\Mail\SendMessage;
 use App\Models\AboutPage;
 use App\Models\ContactPage;
 use App\Models\ServicesList;
 use App\Models\ServicesPage;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
@@ -59,5 +61,14 @@ class PageController extends Controller
         $post = Post::find($id);
 
         return view('Post', compact('post'));
+    }
+
+    public function sendMessage(Request $request)
+    {
+        $msg = $request->all();
+        
+        Mail::to('qualitestengenharia@qualitest.com')->send(new SendMessage($msg));
+
+        return redirect()->route('contact')->with('sucess', 'Mensagem enviada!');
     }
 }

@@ -36,7 +36,9 @@
     </div>
 
     @empty
-      No posts found.
+      <div class="flex items-center justify-center h-screen my-5">
+        Nenhum postagem encontrada.
+      </div>
     @endforelse    
     
   </div>

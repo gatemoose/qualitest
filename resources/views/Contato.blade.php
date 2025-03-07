@@ -9,15 +9,22 @@
         </h2>
 
         <div class="grid lg:grid-cols-2 items-start gap-12">
-          <form class="space-y-3 text-gray-800">
-            <input type='text' placeholder='Nome' class="w-full bg-gray-100 rounded py-3 px-6 text-sm dark:bg-slate-800 dark:text-white" />
-            <input type='email' placeholder='Email' class="w-full bg-gray-100 rounded py-3 px-6 text-sm dark:bg-slate-800 dark:text-white" />
-            <input type='email' placeholder='Telefone' class="w-full bg-gray-100 rounded py-3 px-6 text-sm dark:bg-slate-800 dark:text-white" />
-            <textarea placeholder='Mensagem' rows="6" class="w-full bg-gray-100 rounded px-6 text-sm pt-3 dark:bg-slate-800 dark:text-white"></textarea>
+          <form action='{{ route("sendMessage") }}' class="space-y-3 text-gray-800">
+            <input type='text' required name='name' placeholder='Seu nome' class="w-full bg-gray-100 rounded py-3 px-6 text-sm dark:bg-slate-800 dark:text-white" />
+            <input type='email' name='email' placeholder='Email para contato' class="w-full bg-gray-100 rounded py-3 px-6 text-sm dark:bg-slate-800 dark:text-white" />
+            <input type='phone' name='tel' placeholder='Telefone para contato' class="w-full bg-gray-100 rounded py-3 px-6 text-sm dark:bg-slate-800 dark:text-white" />
+            <textarea name='message' required placeholder='Mensagem' rows="6" class="w-full bg-gray-100 rounded px-6 text-sm pt-3 dark:bg-slate-800 dark:text-white"></textarea>
 
             <div class='flex justify-start gap-4'>
-              <x-button link='#' content='Enviar' px='5' py='3' />
-              <x-button link='https://wa.me/5584996667342' content='Whatsapp' px='5' py='3' />
+            <button type='submit' class="inline-flex items-center px-5 py-3 text-md text-black dark:text-white border border-black dark:border-gray-600 rounded-sm bg-transparent hover:bg-neutral-200 dark:hover:bg-slate-700 transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black dark:focus:ring-gray-600">
+                Enviar
+            </button>
+            @if (session()->has('sucess'))
+            <p class='text-green-500 text-lg font-bold items-center'>
+                {{ session('sucess') }} <br>
+                Entraremos em contato em breve!
+            </p>
+            @endif
             </div>
           </form>
 

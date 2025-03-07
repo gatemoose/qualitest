@@ -9,19 +9,15 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class SendPassword extends Mailable
+class SendMessage extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public string $password, $email;
+    public array $msg;
 
-    /**
-     * Create a new message instance.
-     */
-    public function __construct(string $password, string $email)
+    public function __construct(array $msg)
     {
-        $this->password = $password;
-        $this->email = $email;
+        $this->msg = $msg;
     }
 
     /**
@@ -30,8 +26,7 @@ class SendPassword extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Credenciais da Qualitest',
-            // content: '',
+            subject: 'Um cliente quer entrar em contato!',
         );
     }
 
@@ -41,7 +36,7 @@ class SendPassword extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'mail.send-password',
+            markdown: 'mail.send-message',
         );
     }
 
