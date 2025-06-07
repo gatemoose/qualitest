@@ -21,7 +21,7 @@ The system includes:
 
 ## 🚀 Tools
 
-- [Laravel 10](https://laravel.com/)
+- [Laravel 11](https://laravel.com/)
 - [Filament Admin Panel](https://filamentphp.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - Alpine.js
@@ -44,10 +44,10 @@ The system includes:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/quality-portal.git
+git clone https://github.com/gatemoose/qualitest
 
 # Navigate into the directory
-cd quality-portal
+cd qualitest
 
 # Install backend dependencies
 composer install
