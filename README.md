@@ -1,46 +1,30 @@
-# Quality Portal
+# Overview
 
-![Laravel](https://img.shields.io/badge/Laravel-11.x-red?logo=laravel)
-![Filament](https://img.shields.io/badge/Filament-3.x-yellow?logo=laravel)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?logo=tailwind-css)
-![Status](https://img.shields.io/badge/status-active-brightgreen)
+Quality Portal is a full-stack web application developed for Qualitest Engenharia, a engineering company. The project aims to streamline content management, provide secure client access to documents, and offer a responsive, user-friendly experience for both administrators and users.
 
-## 📌 About
+This website is operated by Qualitest Engenharia and is available at: [qualitestengenharia.com.br](https://qualitestengenharia.com.br).
 
-**Quality Portal** is a full-stack web application developed for **Qualitest Engenharia**, a local engineering company in my hometown. The project aims to streamline content management, provide secure client access to documents, and offer a responsive, user-friendly experience for both administrators and users.
+# Features
 
-The system includes:
+- User authentication (login, logout, password reset)
+- Admin dashboard with Filament
+- CRUD for institutional content and pages
+- Secure document upload and sharing for clients
+- Responsive design for mobile and desktop
+- Blog/news section
 
-- Public-facing informational pages
-- A powerful admin panel built with **Filament**
-- User authentication and management
-- Document uploads for authenticated clients
-- Fully responsive layout with **Tailwind CSS**
+# Tools
 
----
+- Laravel 11
+- Livewire
+- Filament Admin Panel
+- Tailwind CSS
+- Alpine JS
+- PHP
 
-## 🚀 Tools
+# Setup
 
-- [Laravel 11](https://laravel.com/)
-- [Filament Admin Panel](https://filamentphp.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- Alpine.js
-- PHP 8.2+
-
----
-
-## ⚙️ Features
-
-- ☑️ User authentication (login, logout, password reset)
-- ☑️ Admin dashboard with Filament
-- ☑️ CRUD for institutional content and pages
-- ☑️ Secure document upload and sharing for clients
-- ☑️ Responsive design for mobile and desktop
-- ☑️ Blog/news section
-
----
-
-## 🧪 Setup
+Follow the steps:
 
 ```bash
 # Clone the repository
@@ -49,20 +33,30 @@ git clone https://github.com/gatemoose/qualitest
 # Navigate into the directory
 cd qualitest
 
-# Install backend dependencies
+# Install dependencies
 composer install
-
-# Install frontend dependencies
 npm install && npm run dev
 
-# Copy and configure environment variables
+# Configure environment variables
 cp .env.example .env
 php artisan key:generate
 
-# Set up your database credentials in the .env file
+# Using SQLite as database by default
+# You don't need to provide credentials in the .env file
 
 # Run migrations
 php artisan migrate
 
 # Start the local server
 php artisan serve
+```
+
+# Usage
+
+Go to `http://127.0.0.1:8000` to view the website.
+
+To access the Filament Admin Panel, run `php artisan make:filament-user` and follow the steps. Then go to `http://127.0.0.1:8000/admin` and enter your credentials.
+
+# License
+
+This project is distributed under the MIT License.
