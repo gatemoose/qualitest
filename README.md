@@ -6,21 +6,19 @@ This website is operated by Qualitest Engenharia and is available at: [qualitest
 
 # Features
 
-- User authentication (login, logout, password reset)
+- User auth for both admin and clients, including login, logout, password reset
 - Admin dashboard with Filament
-- CRUD for institutional content and pages
-- Secure document upload and sharing for clients
+- User-friendly CMS (Content Management System)
+- Secure document sharing with clients
 - Responsive design for mobile and desktop
-- Blog/news section
+- Acessible blog/news section
 
 # Tools
 
 - Laravel 11
-- Livewire
+- Livewire (for SPA-like feel) 
 - Filament Admin Panel
 - Tailwind CSS
-- Alpine JS
-- PHP
 
 # Setup
 
@@ -28,21 +26,18 @@ Follow the steps:
 
 ```bash
 # Clone the repository
-git clone https://github.com/gatemoose/qualitest
-
-# Navigate into the directory
+git clone https://github.com/gatemoose/qualitest.git
 cd qualitest
 
 # Install dependencies
 composer install
 npm install && npm run dev
 
-# Configure environment variables
+# Configure environment
 cp .env.example .env
 php artisan key:generate
 
-# Using SQLite as database by default
-# You don't need to provide credentials in the .env file
+# Using SQLite DB by default
 
 # Run migrations
 php artisan migrate
